@@ -1,0 +1,281 @@
+import {
+  Stethoscope,
+  Shield,
+  Cpu,
+  ChartBar,
+  Users,
+  CheckCircle,
+  ArrowLeft,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+const HealthcareIndustry = () => {
+  const solutions = [
+    {
+      icon: Shield,
+      title: "HIPAA Compliance",
+      description:
+        "Ensure full compliance with healthcare regulations and protect patient data with our comprehensive security solutions.",
+    },
+    {
+      icon: Cpu,
+      title: "EHR Systems",
+      description:
+        "Modern electronic health record systems that streamline patient care and improve clinical outcomes.",
+    },
+    {
+      icon: ChartBar,
+      title: "Healthcare Analytics",
+      description:
+        "Data-driven insights to improve patient outcomes, optimize operations, and reduce costs.",
+    },
+    {
+      icon: Users,
+      title: "Telemedicine",
+      description:
+        "Enable remote patient care with secure, HIPAA-compliant telemedicine platforms.",
+    },
+  ];
+
+  const benefits = [
+    "Enhanced patient care and safety",
+    "Reduced operational costs",
+    "Improved compliance and security",
+    "Streamlined workflows",
+    "Better data management",
+    "Increased staff productivity",
+  ];
+
+  const caseStudies = [
+    {
+      title: "Regional Hospital Network",
+      challenge: "Legacy EHR system causing delays and errors",
+      solution: "Implemented modern cloud-based EHR with seamless integration",
+      results: "40% reduction in administrative time, 99.9% uptime",
+    },
+    {
+      title: "Medical Practice Group",
+      challenge: "HIPAA compliance concerns and data security risks",
+      solution:
+        "Complete security audit and implementation of compliant infrastructure",
+      results: "Full HIPAA compliance, zero security incidents in 2 years",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white mt-4">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop"
+            alt="Healthcare technology"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
+          <Link
+            to="/industries"
+            className="flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Industries
+          </Link>
+
+          <div className="max-w-3xl">
+            <div className="flex items-center mb-6">
+              <div className="bg-white/20 p-4 rounded-lg mr-4">
+                <Stethoscope className="w-12 h-12" />
+              </div>
+              <h1 className="text-5xl lg:text-6xl font-bold">
+                Healthcare IT Solutions
+              </h1>
+            </div>
+            <p className="text-2xl text-blue-100 mb-8">
+              Transform patient care with secure, compliant, and innovative
+              healthcare technology solutions
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              Schedule a Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Healthcare Technology That Puts Patients First
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                In healthcare, technology must enhance patient care while
+                maintaining the highest standards of security and compliance.
+                Our solutions are designed specifically for healthcare
+                providers, from small practices to large hospital systems.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                We understand the unique challenges of healthcare IT - from
+                regulatory compliance to interoperability, data security to
+                clinical workflows. Our team brings deep expertise in healthcare
+                technology and a commitment to supporting your mission of
+                exceptional patient care.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    99.9%
+                  </div>
+                  <div className="text-sm text-gray-600">System Uptime</div>
+                </div>
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    100%
+                  </div>
+                  <div className="text-sm text-gray-600">HIPAA Compliant</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop"
+                alt="Healthcare professionals"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Healthcare IT Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From compliance to care delivery, we provide end-to-end technology
+              solutions for modern healthcare
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <div className="bg-blue-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                  <solution.icon className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">
+                  {solution.title}
+                </h3>
+                <p className="text-gray-600">{solution.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
+                alt="Medical technology"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Benefits of Modern Healthcare IT
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Investing in the right healthcare technology delivers measurable
+                improvements across your organization
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-lg text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real results for healthcare organizations
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">{study.title}</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">
+                      Challenge
+                    </div>
+                    <p className="text-gray-700">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">
+                      Solution
+                    </div>
+                    <p className="text-gray-700">{study.solution}</p>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">
+                      Results
+                    </div>
+                    <p className="text-blue-600 font-semibold">
+                      {study.results}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Healthcare IT?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Let's discuss how our healthcare-specific solutions can support your
+            organization's goals
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              Schedule Consultation
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Download Healthcare Guide
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default HealthcareIndustry;

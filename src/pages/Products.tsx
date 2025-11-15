@@ -1,332 +1,205 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import CTASection from "@/components/CTASection";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Server, Laptop, Wifi, Settings, HardDrive, Smartphone } from "lucide-react";
 
 const Products = () => {
-  const laptops = [
+  const categories = [
     {
-      name: "Dell Latitude 5540",
-      category: "Business Laptop",
-      description: "Premium business laptop with enterprise security",
-      specs: [
-        "Intel Core i7 13th Gen",
-        "16GB DDR4 RAM",
-        "512GB NVMe SSD",
-        "15.6\" FHD Display",
-        "Windows 11 Pro",
-      ],
-      featured: true,
+      icon: <Laptop className="w-8 h-8" />,
+      title: "Laptops & Desktops",
+      brands: "Dell Latitude, HP ProBook, Lenovo ThinkPad, Microsoft Surface",
     },
     {
-      name: "HP EliteBook 840 G10",
-      category: "Business Laptop",
-      description: "Ultra-portable with long battery life",
-      specs: [
-        "Intel Core i5 13th Gen",
-        "16GB RAM",
-        "256GB SSD",
-        "14\" FHD Touch Display",
-        "Windows 11 Pro",
-      ],
+      icon: <Server className="w-8 h-8" />,
+      title: "Servers",
+      brands: "Dell PowerEdge, HPE ProLiant, Lenovo ThinkSystem",
     },
     {
-      name: "Lenovo ThinkPad X1 Carbon",
-      category: "Business Laptop",
-      description: "Lightweight and durable business ultrabook",
-      specs: [
-        "Intel Core i7 13th Gen",
-        "32GB RAM",
-        "1TB SSD",
-        "14\" WQXGA Display",
-        "Windows 11 Pro",
-      ],
-      featured: true,
+      icon: <Wifi className="w-8 h-8" />,
+      title: "Networking",
+      brands: "Cisco, Ubiquiti, Aruba, TP-Link",
     },
     {
-      name: "Microsoft Surface Laptop 5",
-      category: "Business Laptop",
-      description: "Sleek design with touchscreen capability",
-      specs: [
-        "Intel Core i5",
-        "16GB RAM",
-        "512GB SSD",
-        "13.5\" PixelSense Display",
-        "Windows 11 Pro",
-      ],
+      icon: <Settings className="w-8 h-8" />,
+      title: "Software Licensing",
+      brands: "Microsoft, Adobe, VMware, Office365, Antivirus",
+    },
+    {
+      icon: <HardDrive className="w-8 h-8" />,
+      title: "Accessories",
+      brands: "Monitors, Keyboards, UPS, Printers, Storage",
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "Peripherals",
+      brands: "Webcams, Headsets, Docking Stations, Cables",
     },
   ];
 
-  const desktops = [
+  const benefits = [
     {
-      name: "Dell OptiPlex 7090",
-      category: "Desktop PC",
-      description: "Reliable business desktop with powerful performance",
-      specs: [
-        "Intel Core i7 11th Gen",
-        "16GB DDR4 RAM",
-        "512GB SSD",
-        "Intel UHD Graphics",
-        "Windows 11 Pro",
-      ],
-      featured: true,
+      title: "Bulk Pricing",
+      description: "Best pricing on volume purchases.",
     },
     {
-      name: "HP ProDesk 600 G9",
-      category: "Desktop PC",
-      description: "Compact and efficient desktop solution",
-      specs: [
-        "Intel Core i5 12th Gen",
-        "8GB RAM",
-        "256GB SSD",
-        "Integrated Graphics",
-        "Windows 11 Pro",
-      ],
+      title: "Expert Configuration",
+      description: "Custom setup for fast, secure deployments.",
     },
     {
-      name: "Lenovo ThinkCentre M90a",
-      category: "All-in-One",
-      description: "Space-saving all-in-one desktop",
-      specs: [
-        "Intel Core i7",
-        "16GB RAM",
-        "512GB SSD",
-        "23.8\" FHD Display",
-        "Windows 11 Pro",
-      ],
+      title: "Warranty & Support",
+      description: "Full manufacturer warranty & 24/7 helpdesk.",
+    },
+    {
+      title: "Fast Delivery",
+      description: "Quick turnaround & nationwide fulfillment.",
     },
   ];
 
-  const servers = [
-    {
-      name: "Dell PowerEdge R750",
-      category: "Rack Server",
-      description: "Enterprise-grade rack server",
-      specs: [
-        "Dual Intel Xeon Scalable",
-        "128GB ECC RAM",
-        "4TB RAID Storage",
-        "Dual Power Supply",
-        "iDRAC9 Management",
-      ],
-      featured: true,
-    },
-    {
-      name: "HPE ProLiant DL380 Gen10",
-      category: "Rack Server",
-      description: "Versatile and reliable server platform",
-      specs: [
-        "Dual Intel Xeon Gold",
-        "64GB ECC RAM",
-        "2TB RAID Storage",
-        "ILO5 Management",
-        "Redundant Cooling",
-      ],
-    },
-  ];
-
-  const networking = [
-    {
-      name: "Cisco Catalyst 9300",
-      category: "Switch",
-      description: "Enterprise network switch",
-      specs: [
-        "48 Ports Gigabit",
-        "4x 10G SFP+ Uplinks",
-        "Stackable Design",
-        "Layer 3 Routing",
-        "PoE+ Support",
-      ],
-      featured: true,
-    },
-    {
-      name: "Ubiquiti UniFi Dream Machine Pro",
-      category: "Router/Firewall",
-      description: "All-in-one network security appliance",
-      specs: [
-        "10Gbps Throughput",
-        "Built-in Controller",
-        "VPN Server",
-        "IDS/IPS Features",
-        "Cloud Management",
-      ],
-    },
-    {
-      name: "Aruba AP-635 WiFi 6E",
-      category: "Access Point",
-      description: "Next-generation wireless access point",
-      specs: [
-        "WiFi 6E (802.11ax)",
-        "Tri-band Support",
-        "Up to 4.8 Gbps",
-        "Cloud Managed",
-        "PoE Powered",
-      ],
-    },
-  ];
-
-  const accessories = [
-    {
-      name: "Dell UltraSharp U2723DE",
-      category: "Monitor",
-      description: "Professional 27-inch QHD monitor",
-      specs: [
-        "27\" QHD (2560x1440)",
-        "IPS Panel",
-        "USB-C Connectivity",
-        "Height Adjustable",
-        "99% sRGB",
-      ],
-    },
-    {
-      name: "Logitech MX Keys",
-      category: "Keyboard",
-      description: "Premium wireless keyboard for professionals",
-      specs: [
-        "Backlit Keys",
-        "Multi-device Support",
-        "Rechargeable Battery",
-        "Smart Illumination",
-        "Wireless/Bluetooth",
-      ],
-    },
-    {
-      name: "APC Back-UPS Pro 1500VA",
-      category: "UPS",
-      description: "Uninterruptible power supply",
-      specs: [
-        "1500VA / 865W",
-        "8 Outlets",
-        "LCD Display",
-        "Automatic Voltage Regulation",
-        "USB Monitoring",
-      ],
-    },
+  const enterpriseFeatures = [
+    "Volume discounts for bulk and enterprise purchases",
+    "Warranty extension and coverage options",
+    "Asset tagging and management",
+    "White-glove deployment & installation services",
+    "Custom device configuration",
+    "Flexible financing available",
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-accent/30 to-background">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Our Products
+              Hardware & Software – All From One Partner
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Premium technology products from leading manufacturers. 
-              Bulk orders and enterprise pricing available.
+            <div className="flex flex-wrap justify-center gap-6 mt-12 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Laptop className="w-5 h-5" />
+                <span>Laptops & Desktops</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Server className="w-5 h-5" />
+                <span>Servers</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Wifi className="w-5 h-5" />
+                <span>Networking</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Settings className="w-5 h-5" />
+                <span>Software Licensing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <HardDrive className="w-5 h-5" />
+                <span>Accessories</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Smartphone className="w-5 h-5" />
+                <span>Peripherals</span>
+              </div>
+            </div>
+            <p className="text-muted-foreground mt-8">
+              ...and more – tell us your needs!
             </p>
           </div>
         </section>
-
-        {/* Products Section */}
+        {/* Enterprise Solutions Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <Tabs defaultValue="laptops" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-12">
-                <TabsTrigger value="laptops">Laptops</TabsTrigger>
-                <TabsTrigger value="desktops">Desktops</TabsTrigger>
-                <TabsTrigger value="servers">Servers</TabsTrigger>
-                <TabsTrigger value="networking">Networking</TabsTrigger>
-                <TabsTrigger value="accessories">Accessories</TabsTrigger>
-              </TabsList>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-primary font-semibold mb-4 uppercase tracking-wide">
+                  Enterprise Solutions
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                  Bulk Ordering Made Simple
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Equip your entire organization with premium technology. We handle everything from procurement to deployment.
+                </p>
 
-              <TabsContent value="laptops">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {laptops.map((product, index) => (
-                    <ProductCard key={index} {...product} />
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  {enterpriseFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <p className="text-foreground">{feature}</p>
+                    </div>
                   ))}
                 </div>
-              </TabsContent>
 
-              <TabsContent value="desktops">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {desktops.map((product, index) => (
-                    <ProductCard key={index} {...product} />
-                  ))}
-                </div>
-              </TabsContent>
+                <a href="/contact">
+                  <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                    Contact Sales Team
+                  </button>
+                </a>
+              </div>
 
-              <TabsContent value="servers">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {servers.map((product, index) => (
-                    <ProductCard key={index} {...product} />
-                  ))}
-                </div>
-              </TabsContent>
+              <div className="flex-1 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80"
+              alt="Modern laptop for bulk ordering"
+              className="w-full max-w-md rounded-2xl shadow-2xl object-cover"
+            />
+          </div>
+            </div>
+          </div>
+        </section>
+        {/* Categories Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Popular Models We Offer
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                We source and supply a wide range of modern business hardware and software.
+                <br />
+                Here are just a few examples – ask us for anything!
+              </p>
+            </div>
 
-              <TabsContent value="networking">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {networking.map((product, index) => (
-                    <ProductCard key={index} {...product} />
-                  ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  className="bg-card border border-border rounded-lg p-8 text-center hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-lg mb-4">
+                    {category.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {category.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {category.brands}
+                  </p>
                 </div>
-              </TabsContent>
-
-              <TabsContent value="accessories">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {accessories.map((product, index) => (
-                    <ProductCard key={index} {...product} />
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Why Choose Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Why Buy from ITExceed?
+                Why Choose ITExceed for Your IT Solutions?
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">💰</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-left">
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Competitive Pricing</h3>
-                <p className="text-sm text-muted-foreground">
-                  Volume discounts and enterprise pricing
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">🚚</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Fast Delivery</h3>
-                <p className="text-sm text-muted-foreground">
-                  Quick turnaround on all orders
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">✅</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Warranty Support</h3>
-                <p className="text-sm text-muted-foreground">
-                  Full manufacturer warranty included
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">🛠️</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Setup Service</h3>
-                <p className="text-sm text-muted-foreground">
-                  Optional installation and configuration
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -338,8 +211,6 @@ const Products = () => {
           primaryButtonLink="/contact"
         />
       </main>
-
-      <Footer />
     </div>
   );
 };

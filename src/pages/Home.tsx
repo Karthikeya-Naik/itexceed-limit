@@ -1,156 +1,140 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import ServiceCard from "@/components/ServiceCard";
-import StatsSection from "@/components/StatsSection";
+import OurPeople from "@/components/OurPeople";
+import Services from "@/components/ScrollableServices";
+import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
-import { Cloud, Shield, Server, Database, Network, Headphones } from "lucide-react";
+import { Cloud, Shield, Server, Database, Network, Headphones, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 const Home = () => {
-  const featuredServices = [
+  const scrollContainerRef = useRef(null);
+
+  const services = [
     {
       icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure for modern businesses",
-      features: [
-        "Cloud migration and deployment",
-        "Multi-cloud management",
-        "Cost optimization",
-      ],
-      link: "/services#cloud",
+      category: "Managed Cloud Services",
+      tagline: "Unleash next-gen security for your biz with smart managed services",
+      items: [
+        { title: "Managed Azure", description: "Optimize Azure with managed services for efficiency & scale." },
+        { title: "Managed Microsoft 365", description: "Boost productivity with Managed Microsoft 365 for collaboration." },
+        { title: "Cloud Apps Management", description: "Manage third-party apps efficiently for enhanced compatibility." }
+      ]
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Enterprise-grade security solutions",
-      features: [
-        "Threat detection and response",
-        "Security audits",
-        "Compliance management",
-      ],
-      link: "/services#cybersecurity",
+      category: "Cybersecurity Services",
+      tagline: "Empower your business. Advanced security solutions beyond SOC.",
+      items: [
+        { title: "Managed Detection & Response", description: "Boost security with MDR: Proactive monitoring and response." },
+        { title: "Vulnerability Management", description: "Secure assets with our risk identification and mitigation." },
+        { title: "Cloud Security", description: "Dynamic threat detection and protection for Cloud & Microsoft 365." }
+      ]
     },
     {
       icon: Server,
-      title: "IT Infrastructure",
-      description: "Reliable infrastructure management",
-      features: [
-        "Server management",
-        "Network infrastructure",
-        "Disaster recovery",
-      ],
-      link: "/services#network",
+      category: "Managed IT Services",
+      tagline: "Scale success with expert IT management for security & optimization.",
+      items: [
+        { title: "24/7 Helpdesk", description: "Round-the-clock helpdesk support, ensuring uninterrupted business operations." },
+        { title: "Employee On/Off-boarding", description: "Smooth team transitions with secure onboarding/offboarding." },
+        { title: "Device Lifecycle Management", description: "Optimize operations: Computer management, procurement, and security." }
+      ]
     },
     {
       icon: Database,
-      title: "Data Management",
-      description: "Secure data storage and analytics",
-      features: [
-        "Data backup solutions",
-        "Analytics and insights",
-        "Database optimization",
-      ],
-      link: "/services#data",
+      category: "Professional Services",
+      tagline: "Maximize efficiency with expert IT professionals.",
+      items: [
+        { title: "vCIO", description: "Strategize with vCIO: IT leadership to drive business success." },
+        { title: "IT Consulting", description: "Transform business with IT consulting for efficient solutions." },
+        { title: "Cloud Migration", description: "Secure cloud transition with migration services." }
+      ]
     },
     {
       icon: Network,
-      title: "Network Services",
-      description: "High-performance networking solutions",
-      features: [
-        "Network design and setup",
-        "Performance monitoring",
-        "Security integration",
-      ],
-      link: "/services#network",
+      category: "Network Services",
+      tagline: "High-performance networking solutions for modern business.",
+      items: [
+        { title: "Network Design", description: "Custom network architecture tailored to your needs." },
+        { title: "Performance Monitoring", description: "Real-time network monitoring and optimization." },
+        { title: "Security Integration", description: "Seamless security protocols across your network." }
+      ]
     },
     {
       icon: Headphones,
-      title: "24/7 IT Support",
-      description: "Round-the-clock technical assistance",
-      features: [
-        "Help desk support",
-        "Remote troubleshooting",
-        "On-site assistance",
-      ],
-      link: "/services#it-support",
-    },
+      category: "24/7 IT Support",
+      tagline: "Round-the-clock technical assistance when you need it most.",
+      items: [
+        { title: "Help Desk Support", description: "Immediate assistance for all your IT concerns." },
+        { title: "Remote Troubleshooting", description: "Quick resolution without on-site visits." },
+        { title: "On-site Assistance", description: "Expert technicians ready to help in person." }
+      ]
+    }
   ];
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       
       <main>
         <Hero />
-        
-        <StatsSection />
-
-        {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Services
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive IT solutions tailored to your business needs
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
-                <ServiceCard key={index} {...service} />
-              ))}
-            </div>
-          </div>
-        </section>
-
+        <Services />
         {/* Why Choose Us Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Why Choose ITExceed?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We go beyond expectations to deliver exceptional value
-              </p>
-            </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        Why Choose ITExceed?
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Two decades of excellence in delivering cutting-edge IT solutions
+      </p>
+    </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">🎯</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
-                <p className="text-muted-foreground">
-                  Certified professionals with years of industry experience
-                </p>
-              </div>
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="text-center p-6">
+        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-2xl text-primary-foreground">🏆</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3">20+ Years of Expertise</h3>
+        <p className="text-muted-foreground">
+          Serving businesses since 2002 with industry-leading professionals and proven solutions
+        </p>
+      </div>
 
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">⚡</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Fast Response</h3>
-                <p className="text-muted-foreground">
-                  Quick turnaround times and 24/7 support availability
-                </p>
-              </div>
+      <div className="text-center p-6">
+        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-2xl text-primary-foreground">⚡</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3">24/7 Support</h3>
+        <p className="text-muted-foreground">
+          Round-the-clock availability with rapid response times to keep your business running
+        </p>
+      </div>
 
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-primary-foreground">💼</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Proven Track Record</h3>
-                <p className="text-muted-foreground">
-                  Successfully serving 500+ clients across various industries
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+      <div className="text-center p-6">
+        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-2xl text-primary-foreground">📊</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3">500+ Satisfied Clients</h3>
+        <p className="text-muted-foreground">
+          Trusted by businesses across industries with a track record of successful implementations
+        </p>
+      </div>
+    </div>
+  </div>
+</section>      
+        <OurPeople />
+        <Testimonials />
         <CTASection
           title="Ready to Transform Your Business?"
           description="Let's discuss how ITExceed can help you achieve your technology goals"
@@ -161,7 +145,6 @@ const Home = () => {
         />
       </main>
 
-      <Footer />
     </div>
   );
 };

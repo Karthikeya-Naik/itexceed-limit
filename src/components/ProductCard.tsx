@@ -6,7 +6,7 @@ interface ProductCardProps {
   name: string;
   category: string;
   description: string;
-  specs: string[];
+  specs?: string[];
   featured?: boolean;
 }
 
@@ -19,24 +19,25 @@ const ProductCard = ({ name, category, description, specs, featured }: ProductCa
           {featured && <Badge variant="destructive">Popular</Badge>}
         </div>
         <CardTitle className="text-xl">{name}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="text-base pt-2">{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-2">
-          <h4 className="font-semibold text-sm text-foreground mb-3">Key Specifications:</h4>
-          <ul className="space-y-2">
-            {specs.map((spec, index) => (
-              <li key={index} className="flex items-start text-sm text-muted-foreground">
-                <span className="text-primary mr-2">•</span>
-                {spec}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </CardContent>
+      {specs && specs.length > 0 && (
+        <CardContent>
+          <div className="space-y-2">
+            <h4 className="font-semibold text-sm text-foreground mb-3">Key Specifications:</h4>
+            <ul className="space-y-2">
+              {specs.map((spec, index) => (
+                <li key={index} className="flex items-start text-sm text-muted-foreground">
+                  <span className="text-primary mr-2">•</span>
+                  {spec}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+      )}
       <CardFooter className="flex gap-2">
         <Button className="flex-1">Request Quote</Button>
-        <Button variant="outline">Details</Button>
       </CardFooter>
     </Card>
   );

@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -49,7 +47,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       
       <main className="pt-20">
         {/* Hero Section */}
@@ -249,7 +246,6 @@ const Contact = () => {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 };

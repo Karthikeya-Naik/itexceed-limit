@@ -1,0 +1,224 @@
+import { ShoppingBag, CreditCard, BarChart, Users, CheckCircle, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const RetailEcommerceIndustry = () => {
+  const solutions = [
+    {
+      icon: ShoppingBag,
+      title: "Point of Sale Systems",
+      description: "Integrated POS solutions for seamless checkout experience.",
+    },
+    {
+      icon: CreditCard,
+      title: "Secure Payment Processing",
+      description: "Fast, reliable, and PCI-compliant payment gateways.",
+    },
+    {
+      icon: BarChart,
+      title: "Sales Analytics",
+      description: "Real-time insights to optimize inventory and marketing.",
+    },
+    {
+      icon: Users,
+      title: "Customer Loyalty Platforms",
+      description: "Retain customers with personalized rewards and campaigns.",
+    },
+  ];
+
+  const benefits = [
+    "Increase online and in-store sales",
+    "Streamline inventory management",
+    "Enhance customer engagement",
+    "Boost marketing ROI",
+    "Improve operational efficiency",
+    "Ensure secure transactions",
+    "Enable omnichannel retailing",
+  ];
+
+  const caseStudies = [
+    {
+      title: "Global Retail Chain",
+      challenge: "Outdated POS causing slow transactions and errors",
+      solution: "Deployed modern cloud-based POS with mobile integration",
+      results: "30% faster checkout times, 20% sales growth",
+    },
+    {
+      title: "E-commerce Startup",
+      challenge: "Low customer retention and limited insights",
+      solution: "Implemented customer loyalty and analytics platforms",
+      results: "40% increase in repeat customers, 25% revenue growth",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-800 text-white mt-4">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop"
+            alt="Retail E-commerce technology"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
+          <Link to="/industries" className="flex items-center text-white/90 hover:text-white mb-8 transition-colors">
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Industries
+          </Link>
+          <div className="max-w-3xl">
+            <div className="flex items-center mb-6">
+              <div className="bg-white/20 p-4 rounded-lg mr-4">
+                <ShoppingBag className="w-12 h-12" />
+              </div>
+              <h1 className="text-5xl lg:text-6xl font-bold">Retail & E-commerce Solutions</h1>
+            </div>
+            <p className="text-2xl text-green-100 mb-8">
+              Empower your retail business with scalable and secure e-commerce technology tailored for omni-channel success.
+            </p>
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              Schedule a Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Retail Technology That Drives Growth</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Retail and e-commerce businesses require agile technology to respond to changing customer demands. Our solutions integrate all sales channels and provide rich customer insights.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                From large retail chains to online startups, we deliver tailored platforms that enhance customer experience and operational efficiency.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-green-600 mb-2">99.99%</div>
+                  <div className="text-sm text-gray-600">System Uptime</div>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
+                  <div className="text-sm text-gray-600">PCI Compliant</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop"
+                alt="Retail store technology"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Retail IT Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From point of sale to analytics, our technology suite enhances every retail touchpoint.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div className="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                  <solution.icon className="w-7 h-7 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{solution.title}</h3>
+                <p className="text-gray-600">{solution.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop"
+                alt="Retail management"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Benefits of Retail & E-commerce IT</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Investing in the right technology delivers measurable improvements in customer satisfaction, sales, and operational efficiency.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-lg text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Retail Success Stories</h2>
+            <p className="text-xl text-gray-600">Real results for retail enterprises and startups</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">{study.title}</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">Challenge</div>
+                    <p className="text-gray-700">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">Solution</div>
+                    <p className="text-gray-700">{study.solution}</p>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-gray-500 mb-2">Results</div>
+                    <p className="text-green-600 font-semibold">{study.results}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Retail Business?</h2>
+          <p className="text-xl mb-8 text-green-100">
+            Let's partner to build scalable retail technology that drives your success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              Schedule Consultation
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Download Retail Guide
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default RetailEcommerceIndustry;

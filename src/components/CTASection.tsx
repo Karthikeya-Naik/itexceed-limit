@@ -32,7 +32,7 @@ const CTASection = ({
             </Link>
           </Button>
           {secondaryButtonText && secondaryButtonLink && (
-            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-black-foreground hover:bg-primary-foreground hover:text-primary">
               <Link to={secondaryButtonLink}>{secondaryButtonText}</Link>
             </Button>
           )}
