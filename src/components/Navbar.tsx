@@ -523,11 +523,11 @@ const Navbar = () => {
                             index !== services.length - 1 ? 'mb-1' : ''
                           }`}
                         >
-                          <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all">
-                            <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                          <div className="w-9 h-9 rounded-md bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-all">
+                            <IconComponent className="w-4 h-4 text-blue-700 group-hover:text-blue-800 transition-colors" />
                           </div>
                           <div className="flex-1">
-                            <h4 className="text-sm font-medium text-black group-hover:text-primary transition-colors">
+                            <h4 className="text-sm font-medium text-gray-900 transition-colors">
                               {service.name}
                             </h4>
                           </div>
@@ -539,9 +539,9 @@ const Navbar = () => {
                     <Link
                       to="/services"
                       onClick={() => setServicesOpen(false)}
-                      className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary hover:bg-gray-100 transition-colors group"
+                      className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-blue-600 hover:bg-gray-100 transition-colors group"
                     >
-                      View All Services
+                      View More
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -560,47 +560,47 @@ const Navbar = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {industriesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden z-50"
-                  onMouseEnter={() => setIndustriesOpen(true)}
-                  onMouseLeave={() => setIndustriesOpen(false)}
-                >
-                  <div className="p-2">
-                    {industries.map((industry, index) => {
-                      const IconComponent = industry.icon;
-                      return (
-                        <Link
-                          key={industry.name}
-                          to={industry.path}
-                          onClick={() => setIndustriesOpen(false)} 
-                          className={`flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-blue-50 transition-all group ${
-                            index !== industries.length - 1 ? 'mb-1' : ''
-                          }`}
-                        >
-                          <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all">
-                            <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-sm font-medium text-black group-hover:text-primary transition-colors">
-                              {industry.name}
-                            </h4>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                  <div className="border-t border-gray-200 bg-gray-50">
-                    <Link
-                      to="/industries"
-                      onClick={() => setIndustriesOpen(false)}
-                      className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary hover:bg-gray-100 transition-colors group"
-                    >
-                      View All Industries
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
+              <div
+                className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden z-50"
+                onMouseEnter={() => setIndustriesOpen(true)}
+                onMouseLeave={() => setIndustriesOpen(false)}
+              >
+                <div className="p-2">
+                  {industries.map((industry, index) => {
+                    const IconComponent = industry.icon;
+                    return (
+                      <Link
+                        key={industry.name}
+                        to={industry.path}
+                        onClick={() => setIndustriesOpen(false)} 
+                        className={`flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-blue-50 transition-all group ${
+                          index !== industries.length - 1 ? 'mb-1' : ''
+                        }`}
+                      >
+                        <div className="w-9 h-9 rounded-md bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-all">
+                          <IconComponent className="w-4 h-4 text-blue-700 group-hover:text-blue-800 transition-colors" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-sm font-medium text-gray-900 transition-colors">
+                            {industry.name}
+                          </h4>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
-              )}
+                <div className="border-t border-gray-200 bg-gray-50">
+                  <Link
+                    to="/industries"
+                    onClick={() => setIndustriesOpen(false)}
+                    className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-blue-600 hover:bg-gray-100 transition-colors group"
+                  >
+                    View More
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            )}
             </div>
 
             <Link
