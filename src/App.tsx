@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ITServices from "./components/services/ItServices";
 import CloudSolutions from "./components/services/CloudSolutions";
-import CyberSecurity from "./components/services/cybersecurity";
+import CyberSecurity from "./components/services/CyberSecurity";
 import DataManagement from "./components/services/DataManagement";
 import NetworkInfrastructure from "./components/services/NetworkInfrastructure";
 import ServerManagement from "./components/services/ServerManagement";
