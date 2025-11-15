@@ -1,3 +1,402 @@
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import { ChevronDown, Menu, X, ArrowRight, Server, Cloud, Wifi, Code, Building2, Stethoscope, Factory, Home } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import logo from "../../public/logo.png";
+
+// const Navbar = () => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [servicesOpen, setServicesOpen] = useState(false);
+//   const [industriesOpen, setIndustriesOpen] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setScrolled(window.scrollY > 20);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   const services = [
+//     { 
+//       name: "IT Services", 
+//       path: "/services/it-services",
+//       icon: Server,
+//       description: "Comprehensive IT support and management"
+//     },
+//     { 
+//       name: "Cloud Services", 
+//       path: "/services/cloud-services",
+//       icon: Cloud,
+//       description: "Scalable cloud infrastructure solutions"
+//     },
+//     { 
+//       name: "Wireless Network Services", 
+//       path: "/services/wireless-network",
+//       icon: Wifi,
+//       description: "Enterprise wireless connectivity"
+//     },
+//   ];
+
+//   const industries = [
+//     { 
+//       name: "Healthcare", 
+//       path: "/industries/healthcare",
+//       icon: Stethoscope,
+//       description: "Healthcare IT solutions"
+//     },
+//     { 
+//       name: "Manufacturing", 
+//       path: "/industries/manufacturing",
+//       icon: Factory,
+//       description: "Industrial technology systems"
+//     },
+//     { 
+//       name: "Real Estate", 
+//       path: "/industries/real-estate",
+//       icon: Building2,
+//       description: "Property management technology"
+//     },
+//   ];
+
+//   return (
+//     <nav
+//       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+//         scrolled
+//           ? "bg-background/95 backdrop-blur-md shadow-sm"
+//           : "bg-background"
+//       }`}
+//     >
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex justify-between items-center h-20">
+//           {/* Logo */}
+//           <Link to="/" className="flex items-center space-x-2 group">
+//             <img
+//               src={logo}
+//               alt="ITExceed Logo"
+//               className="h-12 w-auto"
+//             />
+//             <div className="relative">
+//               <div className="text-2xl font-display font-bold text-foreground">
+//                 IT<span className="text-primary">Exceed</span>
+//               </div>
+//               <div className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
+//                 Exceeding the limits
+//               </div>
+//             </div>
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden lg:flex items-center space-x-1">
+//             <Link
+//               to="/"
+//               className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+//             >
+//               Home
+//             </Link>
+
+//             {/* Services Mega Menu */}
+//             <div className="relative group">
+//               <button
+//                 className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center"
+//                 onMouseEnter={() => setServicesOpen(true)}
+//                 onMouseLeave={() => setServicesOpen(false)}
+//               >
+//                 Services
+//                 <ChevronDown className="ml-1 h-4 w-4" />
+//               </button>
+//               {servicesOpen && (
+//                 <div
+//                   className="absolute top-full left-0 mt-1 w-64 bg-background/98 backdrop-blur-sm border border-border/50 rounded-lg shadow-xl overflow-hidden z-50"
+//                   onMouseEnter={() => setServicesOpen(true)}
+//                   onMouseLeave={() => setServicesOpen(false)}
+//                 >
+//                   <div className="p-2">
+//                     {services.map((service, index) => {
+//                       const IconComponent = service.icon;
+//                       return (
+//                         <Link
+//                           key={service.name}
+//                           to={service.path}
+//                           onClick={() => setServicesOpen(false)} 
+//                           className={`flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent/80 transition-all group ${
+//                             index !== services.length - 1 ? 'mb-1' : ''
+//                           }`}
+//                         >
+//                           <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+//                             <IconComponent className="w-4 h-4 text-primary" />
+//                           </div>
+//                           <div className="flex-1">
+//                             <h4 className="text-sm font-medium text-black group-hover:text-primary transition-colors">
+//                               {service.name}
+//                             </h4>
+//                             {/* <p className="text-xs text-muted-foreground text-black">
+//                               {service.description}
+//                             </p> */}
+//                           </div>
+//                         </Link>
+//                       );
+//                     })}
+//                   </div>
+//                   <div className="border-t border-border/50 bg-accent/30">
+//                     <Link
+//                       to="/services"
+//                       onClick={() => setServicesOpen(false)}
+//                       className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary hover:bg-accent/50 transition-colors group"
+//                     >
+//                       View All Services
+//                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+//                     </Link>
+//                   </div>
+//                 </div>
+//               )}
+//             </div>
+
+//             {/* Industries Mega Menu */}
+//             <div className="relative group">
+//               <button
+//                 className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center"
+//                 onMouseEnter={() => setIndustriesOpen(true)}
+//                 onMouseLeave={() => setIndustriesOpen(false)}
+//               >
+//                 Industries
+//                 <ChevronDown className="ml-1 h-4 w-4" />
+//               </button>
+//               {industriesOpen && (
+//                 <div
+//                   className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-background border border-border rounded-xl shadow-2xl py-6 px-6 z-50"
+//                   onMouseEnter={() => setIndustriesOpen(true)}
+//                   onMouseLeave={() => setIndustriesOpen(false)}
+//                 >
+//                   {/* View All Industries Header */}
+//                   <Link
+//                     to="/industries"
+//                     onClick={() => setIndustriesOpen(false)} 
+//                     className="flex items-center justify-between p-4 mb-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg hover:from-primary/20 hover:to-primary/10 transition-all group"
+//                   >
+//                     <div>
+//                       <h3 className="text-base font-bold text-foreground mb-1">View All Industries</h3>
+//                       <p className="text-xs text-muted-foreground">Discover industry-specific solutions</p>
+//                     </div>
+//                     <ArrowRight className="h-5 w-5 text-primary group-hover:translate-x-1 transition-transform" />
+//                   </Link>
+
+//                   {/* Industries Grid */}
+//                   <div className="grid grid-cols-2 gap-3">
+//                     {industries.map((industry) => {
+//                       const IconComponent = industry.icon;
+//                       return (
+//                         <Link
+//                           key={industry.name}
+//                           to={industry.path}
+//                           onClick={() => setIndustriesOpen(false)}
+//                           className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-all group"
+//                         >
+//                           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+//                             <IconComponent className="w-5 h-5 text-primary" />
+//                           </div>
+//                           <div className="flex-1 min-w-0">
+//                             <h4 className="text-sm font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">
+//                               {industry.name}
+//                             </h4>
+//                             <p className="text-xs text-muted-foreground line-clamp-1">
+//                               {industry.description}
+//                             </p>
+//                           </div>
+//                         </Link>
+//                       );
+//                     })}
+//                   </div>
+//                 </div>
+//               )}
+//             </div>
+
+//             <Link
+//               to="/products"
+//               className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+//             >
+//               Products
+//             </Link>
+//             <Link
+//               to="/about"
+//               className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+//             >
+//               Who We Are
+//             </Link>
+//             <Link
+//               to="/contact"
+//               className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+//             >
+//               Contact Us
+//             </Link>
+//           </div>
+
+//           {/* CTA Button */}
+//           <div className="hidden lg:block">
+//             <Button asChild>
+//               <Link to="/contact">Get Started</Link>
+//             </Button>
+//           </div>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             className="lg:hidden p-2 text-foreground"
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//             aria-label="Toggle menu"
+//           >
+//             {mobileMenuOpen ? (
+//               <X className="h-6 w-6" />
+//             ) : (
+//               <Menu className="h-6 w-6" />
+//             )}
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {mobileMenuOpen && (
+//         <div className="lg:hidden bg-background border-t border-border">
+//           <div className="px-4 py-4 space-y-3">
+//             <Link
+//               to="/"
+//               className="block py-2 text-sm font-medium text-foreground"
+//               onClick={() => setMobileMenuOpen(false)}
+//             >
+//               Home
+//             </Link>
+            
+//             {/* Mobile Services */}
+//             <div>
+//               <Link
+//                 to="/services"
+//                 className="flex items-center justify-between py-2 text-sm font-medium text-foreground"
+//                 onClick={() => setMobileMenuOpen(false)}
+//               >
+//                 View All Services
+//                 <ArrowRight className="h-4 w-4 text-primary" />
+//               </Link>
+//               <div className="pl-4 space-y-2 mt-2">
+//                 {services.map((service) => {
+//                   const IconComponent = service.icon;
+//                   return (
+//                     <Link
+//                       key={service.name}
+//                       to={service.path}
+//                       className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+//                       onClick={() => setMobileMenuOpen(false)}
+//                     >
+//                       <IconComponent className="h-4 w-4 text-primary" />
+//                       {service.name}
+//                     </Link>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Mobile Industries */}
+//             <div>
+//               <Link
+//                 to="/industries"
+//                 className="flex items-center justify-between py-2 text-sm font-medium text-foreground"
+//                 onClick={() => setMobileMenuOpen(false)}
+//               >
+//                 View All Industries
+//                 <ArrowRight className="h-4 w-4 text-primary" />
+//               </Link>
+//               <div className="pl-4 space-y-2 mt-2">
+//                 {industries.map((industry) => {
+//                   const IconComponent = industry.icon;
+//                   return (
+//                     <Link
+//                       key={industry.name}
+//                       to={industry.path}
+//                       className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+//                       onClick={() => setMobileMenuOpen(false)}
+//                     >
+//                       <IconComponent className="h-4 w-4 text-primary" />
+//                       {industry.name}
+//                     </Link>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+
+//             <Link
+//               to="/products"
+//               className="block py-2 text-sm font-medium text-foreground"
+//               onClick={() => setMobileMenuOpen(false)}
+//             >
+//               Products
+//             </Link>
+//             <Link
+//               to="/about"
+//               className="block py-2 text-sm font-medium text-foreground"
+//               onClick={() => setMobileMenuOpen(false)}
+//             >
+//               Who We Are
+//             </Link>
+//             <Link
+//               to="/contact"
+//               className="block py-2 text-sm font-medium text-foreground"
+//               onClick={() => setMobileMenuOpen(false)}
+//             >
+//               Contact Us
+//             </Link>
+//             <Button asChild className="w-full">
+//               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight, Server, Cloud, Wifi, Code, Building2, Stethoscope, Factory, Home } from "lucide-react";
@@ -108,48 +507,43 @@ const Navbar = () => {
               </button>
               {servicesOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-background border border-border rounded-xl shadow-2xl py-6 px-6 z-50"
+                  className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden z-50"
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  {/* View All Services Header */}
-                  <Link
-                    to="/services"
-                    onClick={() => setServicesOpen(false)}
-                    className="flex items-center justify-between p-4 mb-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg hover:from-primary/20 hover:to-primary/10 transition-all group"
-                  >
-                    <div>
-                      <h3 className="text-base font-bold text-foreground mb-1">View All Services</h3>
-                      <p className="text-xs text-muted-foreground">Explore our complete service portfolio</p>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-primary group-hover:translate-x-1 transition-transform" />
-                  </Link>
-
-                  {/* Services Grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    {services.map((service) => {
+                  <div className="p-2">
+                    {services.map((service, index) => {
                       const IconComponent = service.icon;
                       return (
                         <Link
                           key={service.name}
                           to={service.path}
                           onClick={() => setServicesOpen(false)} 
-                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-all group"
+                          className={`flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-blue-50 transition-all group ${
+                            index !== services.length - 1 ? 'mb-1' : ''
+                          }`}
                         >
-                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                            <IconComponent className="w-5 h-5 text-primary" />
+                          <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all">
+                            <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">
+                          <div className="flex-1">
+                            <h4 className="text-sm font-medium text-black group-hover:text-primary transition-colors">
                               {service.name}
                             </h4>
-                            <p className="text-xs text-muted-foreground line-clamp-1">
-                              {service.description}
-                            </p>
                           </div>
                         </Link>
                       );
                     })}
+                  </div>
+                  <div className="border-t border-gray-200 bg-gray-50">
+                    <Link
+                      to="/services"
+                      onClick={() => setServicesOpen(false)}
+                      className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary hover:bg-gray-100 transition-colors group"
+                    >
+                      View All Services
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               )}
@@ -167,48 +561,43 @@ const Navbar = () => {
               </button>
               {industriesOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-background border border-border rounded-xl shadow-2xl py-6 px-6 z-50"
+                  className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden z-50"
                   onMouseEnter={() => setIndustriesOpen(true)}
                   onMouseLeave={() => setIndustriesOpen(false)}
                 >
-                  {/* View All Industries Header */}
-                  <Link
-                    to="/industries"
-                    onClick={() => setIndustriesOpen(false)} 
-                    className="flex items-center justify-between p-4 mb-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg hover:from-primary/20 hover:to-primary/10 transition-all group"
-                  >
-                    <div>
-                      <h3 className="text-base font-bold text-foreground mb-1">View All Industries</h3>
-                      <p className="text-xs text-muted-foreground">Discover industry-specific solutions</p>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-primary group-hover:translate-x-1 transition-transform" />
-                  </Link>
-
-                  {/* Industries Grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    {industries.map((industry) => {
+                  <div className="p-2">
+                    {industries.map((industry, index) => {
                       const IconComponent = industry.icon;
                       return (
                         <Link
                           key={industry.name}
                           to={industry.path}
-                          onClick={() => setIndustriesOpen(false)}
-                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-all group"
+                          onClick={() => setIndustriesOpen(false)} 
+                          className={`flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-blue-50 transition-all group ${
+                            index !== industries.length - 1 ? 'mb-1' : ''
+                          }`}
                         >
-                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                            <IconComponent className="w-5 h-5 text-primary" />
+                          <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all">
+                            <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">
+                          <div className="flex-1">
+                            <h4 className="text-sm font-medium text-black group-hover:text-primary transition-colors">
                               {industry.name}
                             </h4>
-                            <p className="text-xs text-muted-foreground line-clamp-1">
-                              {industry.description}
-                            </p>
                           </div>
                         </Link>
                       );
                     })}
+                  </div>
+                  <div className="border-t border-gray-200 bg-gray-50">
+                    <Link
+                      to="/industries"
+                      onClick={() => setIndustriesOpen(false)}
+                      className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary hover:bg-gray-100 transition-colors group"
+                    >
+                      View All Industries
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               )}
@@ -258,96 +647,115 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-background border-t border-border">
-          <div className="px-4 py-4 space-y-3">
+        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+          <div className="px-4 py-4 space-y-1 max-h-[calc(100vh-80px)] overflow-y-auto">
             <Link
               to="/"
-              className="block py-2 text-sm font-medium text-foreground"
+              className="block py-2.5 px-3 text-sm font-medium text-black hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
             
             {/* Mobile Services */}
-            <div>
-              <Link
-                to="/services"
-                className="flex items-center justify-between py-2 text-sm font-medium text-foreground"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                View All Services
-                <ArrowRight className="h-4 w-4 text-primary" />
-              </Link>
-              <div className="pl-4 space-y-2 mt-2">
+            <div className="py-2">
+              <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                Services
+              </div>
+              <div className="space-y-1 mt-1">
                 {services.map((service) => {
                   const IconComponent = service.icon;
                   return (
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-md hover:bg-gray-50 transition-all group"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <IconComponent className="h-4 w-4 text-primary" />
-                      {service.name}
+                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+                        <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                      </div>
+                      <span className="text-sm font-medium text-black group-hover:text-primary transition-colors">
+                        {service.name}
+                      </span>
                     </Link>
                   );
                 })}
               </div>
+              <Link
+                to="/services"
+                className="flex items-center justify-between mt-2 py-2 px-3 text-sm font-medium text-primary hover:bg-gray-50 rounded-md transition-colors group"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                View All Services
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
             {/* Mobile Industries */}
-            <div>
-              <Link
-                to="/industries"
-                className="flex items-center justify-between py-2 text-sm font-medium text-foreground"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                View All Industries
-                <ArrowRight className="h-4 w-4 text-primary" />
-              </Link>
-              <div className="pl-4 space-y-2 mt-2">
+            <div className="py-2">
+              <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                Industries
+              </div>
+              <div className="space-y-1 mt-1">
                 {industries.map((industry) => {
                   const IconComponent = industry.icon;
                   return (
                     <Link
                       key={industry.name}
                       to={industry.path}
-                      className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="flex items-center gap-3 py-2.5 px-3 rounded-md hover:bg-gray-50 transition-all group"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <IconComponent className="h-4 w-4 text-primary" />
-                      {industry.name}
+                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+                        <IconComponent className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                      </div>
+                      <span className="text-sm font-medium text-black group-hover:text-primary transition-colors">
+                        {industry.name}
+                      </span>
                     </Link>
                   );
                 })}
               </div>
+              <Link
+                to="/industries"
+                className="flex items-center justify-between mt-2 py-2 px-3 text-sm font-medium text-primary hover:bg-gray-50 rounded-md transition-colors group"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                View All Industries
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
             <Link
               to="/products"
-              className="block py-2 text-sm font-medium text-foreground"
+              className="block py-2.5 px-3 text-sm font-medium text-black hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Products
             </Link>
             <Link
               to="/about"
-              className="block py-2 text-sm font-medium text-foreground"
+              className="block py-2.5 px-3 text-sm font-medium text-black hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Who We Are
             </Link>
             <Link
               to="/contact"
-              className="block py-2 text-sm font-medium text-foreground"
+              className="block py-2.5 px-3 text-sm font-medium text-black hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact Us
             </Link>
-            <Button asChild className="w-full">
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
-            </Button>
+            
+            <div className="pt-4 pb-2">
+              <Button asChild className="w-full">
+                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                  Get Started
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}

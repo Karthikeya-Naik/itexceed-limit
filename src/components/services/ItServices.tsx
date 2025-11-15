@@ -98,7 +98,7 @@ const ITSupportDetail = () => {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Expert technical support when you need it most. Keep your business running smoothly with our comprehensive helpdesk services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -113,7 +113,7 @@ const ITSupportDetail = () => {
               <Phone className="w-5 h-5" />
               Talk to an Expert
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -276,7 +276,7 @@ const ITSupportDetail = () => {
               },
             ].map((item, index) => (
               <div key={index} className="text-center relative">
-                <div className="text-6xl font-bold text-blue-600/20 mb-4">{item.step}</div>
+                <div className="text-6xl font-bold text-blue-600/70 mb-4">{item.step}</div>
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-gray-300">{item.desc}</p>
                 {index < 0 && (
@@ -306,13 +306,13 @@ const ITSupportDetail = () => {
               <MessageSquare className="w-5 h-5" />
               Request a Quote
             </a>
-            <a 
+            {/* <a 
               href="tel:+1234567890"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               <Phone className="w-5 h-5" />
               Call Us Now
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

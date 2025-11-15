@@ -209,7 +209,7 @@ const SoftwareDevelopmentDetail = () => {
           <p className="text-xl text-violet-100 max-w-3xl mx-auto mb-8">
             Custom software solutions that drive innovation, streamline operations, and accelerate your business growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -223,7 +223,7 @@ const SoftwareDevelopmentDetail = () => {
             >
               View Portfolio
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -478,12 +478,12 @@ const SoftwareDevelopmentDetail = () => {
               <Rocket className="w-5 h-5" />
               Start Your Project
             </a>
-            <a 
+            {/* <a 
               href="#consultation"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Schedule Consultation
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

@@ -87,7 +87,7 @@ const NetworkInfrastructureDetail = () => {
       icon: Router,
       title: "Routers & Switches",
       description: "Enterprise-grade routing and switching equipment for optimal data flow",
-      image: "https://images.unsplash.com/photo-1558494403-7f5a6d8b6c23?w=800&q=80"
+      image: "https://i.pinimg.com/736x/ef/ec/8c/efec8c97013277e2a3e3fc7a925288ab.jpg"
     },
     {
       icon: Wifi,
@@ -105,7 +105,7 @@ const NetworkInfrastructureDetail = () => {
       icon: Server,
       title: "Network Servers",
       description: "Dedicated servers for DHCP, DNS, and network management",
-      image: "https://images.unsplash.com/photo-1558494403-7f5a6d8b6c23?w=800&q=80"
+      image: "https://i.pinimg.com/736x/10/44/a6/1044a6edc3273cf7d5856745a4c01705.jpg"
     }
   ];
 
@@ -171,7 +171,7 @@ const NetworkInfrastructureDetail = () => {
           <p className="text-xl text-emerald-100 max-w-3xl mx-auto mb-8">
             Robust, secure, and scalable network infrastructure designed to keep your business connected and productive.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -185,7 +185,7 @@ const NetworkInfrastructureDetail = () => {
             >
               Explore Solutions
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -474,12 +474,12 @@ const NetworkInfrastructureDetail = () => {
               <Signal className="w-5 h-5" />
               Schedule Network Audit
             </a>
-            <a 
+            {/* <a 
               href="#demo"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Case Studies
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

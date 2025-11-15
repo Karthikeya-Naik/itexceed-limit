@@ -190,7 +190,7 @@ const WebDevelopmentDetail = () => {
           <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
             Professional web development services that transform your ideas into powerful, scalable digital solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -204,7 +204,7 @@ const WebDevelopmentDetail = () => {
             >
               Free Consultation
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -528,12 +528,12 @@ const WebDevelopmentDetail = () => {
               <Code className="w-5 h-5" />
               Get Started Now
             </a>
-            <a 
+            {/* <a 
               href="#portfolio"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Portfolio
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

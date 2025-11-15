@@ -159,7 +159,7 @@ const CybersecurityDetail = () => {
           <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">
             Advanced security solutions that safeguard your data, systems, and reputation against evolving cyber threats.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -173,7 +173,7 @@ const CybersecurityDetail = () => {
             >
               Talk to Security Expert
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -434,13 +434,13 @@ const CybersecurityDetail = () => {
               Get Free Security Audit
               <ArrowRight className="w-5 h-5" />
             </a>
-            <a 
+            {/* <a 
               href="#emergency"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               <AlertTriangle className="w-5 h-5" />
               Emergency Response
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

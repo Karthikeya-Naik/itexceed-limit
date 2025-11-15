@@ -83,9 +83,11 @@ const FinanceBankingIndustry = () => {
             <p className="text-2xl text-emerald-100 mb-8">
               Secure, compliant, and innovative technology solutions that power the future of financial services
             </p>
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
-              Request a Demo
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+                Request a Demo
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -289,12 +291,14 @@ const FinanceBankingIndustry = () => {
             Let's discuss how our solutions can help you stay competitive, compliant, and customer-focused
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link to="/contact">
+              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+                Schedule Consultation
+              </button>
+            </Link>
+            {/* <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               View Security Whitepaper
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

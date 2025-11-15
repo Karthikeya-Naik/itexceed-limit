@@ -148,7 +148,7 @@ const DataManagementDetail = () => {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Professional data management solutions that ensure your information is secure, accessible, and driving business value.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
@@ -162,7 +162,7 @@ const DataManagementDetail = () => {
             >
               Explore Solutions
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -415,12 +415,12 @@ const DataManagementDetail = () => {
               <BarChart3 className="w-5 h-5" />
               Request Data Assessment
             </a>
-            <a 
+            {/* <a 
               href="#demo"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Schedule Demo
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

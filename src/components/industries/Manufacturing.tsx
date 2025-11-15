@@ -75,9 +75,11 @@ const ManufacturingIndustry = () => {
             <p className="text-2xl text-gray-300 mb-8">
               Drive industrial innovation and operational excellence with smart manufacturing IT solutions.
             </p>
+            <Link to="/contact">
             <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule a Consultation
             </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -207,12 +209,14 @@ const ManufacturingIndustry = () => {
             Let’s discuss how our manufacturing tech solutions can transform your operations and boost efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Schedule a Consultation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link to="/contact">
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Schedule a Consultation
+              </button>
+            </Link>
+            {/* <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Download Manufacturing Guide
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

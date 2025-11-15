@@ -94,9 +94,11 @@ const HealthcareIndustry = () => {
               Transform patient care with secure, compliant, and innovative
               healthcare technology solutions
             </p>
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-              Schedule a Consultation
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Schedule a Consultation
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -265,12 +267,14 @@ const HealthcareIndustry = () => {
             organization's goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link to="/contact">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Schedule Consultation
+              </button>
+            </Link>
+            {/* <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Download Healthcare Guide
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
