@@ -44,6 +44,7 @@ All colors MUST be HSL.
     --professional-gray: 220 9% 46%;
     --professional-gray-light: 220 14% 96%;
     --professional-border: 220 13% 91%;
+    --professional-dark-blue: 220 81% 30%;
   }
 
   .dark {

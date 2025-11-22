@@ -20,7 +20,7 @@ const CTASection = ({
   secondaryButtonLink,
 }: CTASectionProps) => {
   return (
-    <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
+    <section className="py-20 bg-professional-darkBlue">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">{title}</h2>
         <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">{description}</p>
@@ -32,7 +32,8 @@ const CTASection = ({
             </Link>
           </Button>
           {secondaryButtonText && secondaryButtonLink && (
-            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-black-foreground hover:bg-primary-foreground hover:text-primary">
+            // border-white text-white hover:bg-white hover:text-professional-darkBlue
+            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-black-foreground hover:bg-primary-foreground hover:text-professional-darkBlue">
               <Link to={secondaryButtonLink}>{secondaryButtonText}</Link>
             </Button>
           )}

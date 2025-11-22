@@ -17,7 +17,9 @@ import EmailCollaboration from "./components/services/EmailCollaboration";
 import BackupRecovery from "./components/services/BackupRecovery";
 import WirelessSolutions from "./components/services/WirelessSolutions";
 import AccessControl from "./components/services/AccessControl";
+import PrintingDesigningDetail from "./components/services/PrintingDesigning";
 import Industries from "./pages/Industries";
+import HospitalityIndustry from "./components/industries/Hospitality";
 import Healthcare from "./components/industries/Healthcare";
 import FinanceBanking from "./components/industries/FinanceBanking";
 import RetailEcommerce from "./components/industries/RetailEcommerce";
@@ -31,6 +33,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -56,7 +60,9 @@ const App = () => (
           <Route path="/services/backup-recovery" element={<BackupRecovery />} />
           <Route path="/services/wireless-network" element={<WirelessSolutions />} />
           <Route path="/services/access-control" element={<AccessControl />} />
+          <Route path="/services/printing-designing" element={<PrintingDesigningDetail />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/hospitality" element={<HospitalityIndustry />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/finance-banking" element={<FinanceBanking />} />
           <Route path="/industries/retail-ecommerce" element={<RetailEcommerce />} />
@@ -65,6 +71,8 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,75 +1,62 @@
-import {
-  Stethoscope,
-  Shield,
-  Cpu,
-  ChartBar,
-  Users,
-  CheckCircle,
-  ArrowLeft,
-} from "lucide-react";
+import { Hotel, Shield, Cpu, ChartBar, Users, CheckCircle, ArrowLeft, Wifi } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const HealthcareIndustry = () => {
+const HospitalityIndustry = () => {
   const solutions = [
     {
-      icon: Shield,
-      title: "HIPAA Compliance",
-      description:
-        "Ensure full compliance with healthcare regulations and protect patient data with our comprehensive security solutions.",
-    },
-    {
-      icon: Cpu,
-      title: "EHR Systems",
-      description:
-        "Modern electronic health record systems that streamline patient care and improve clinical outcomes.",
-    },
-    {
-      icon: ChartBar,
-      title: "Healthcare Analytics",
-      description:
-        "Data-driven insights to improve patient outcomes, optimize operations, and reduce costs.",
+      icon: Hotel,
+      title: "Property Management Systems",
+      description: "Comprehensive PMS solutions that streamline operations from reservations to check-out and beyond.",
     },
     {
       icon: Users,
-      title: "Telemedicine",
-      description:
-        "Enable remote patient care with secure, HIPAA-compliant telemedicine platforms.",
+      title: "Guest Experience Platforms",
+      description: "Personalized guest journeys with mobile apps, digital concierge, and integrated communication.",
+    },
+    {
+      icon: ChartBar,
+      title: "Revenue Management",
+      description: "AI-powered pricing optimization and analytics to maximize occupancy and revenue per room.",
+    },
+    {
+      icon: Shield,
+      title: "Data Security & Compliance",
+      description: "PCI DSS compliant payment processing and guest data protection with enterprise-grade security.",
     },
   ];
 
   const benefits = [
-    "Enhanced patient care and safety",
-    "Reduced operational costs",
-    "Improved compliance and security",
-    "Streamlined workflows",
-    "Better data management",
-    "Increased staff productivity",
+    "Enhanced guest satisfaction and loyalty",
+    "Increased operational efficiency",
+    "Improved revenue management",
+    "Streamlined staff workflows",
+    "Better data-driven decision making",
+    "Seamless integration across systems",
   ];
 
   const caseStudies = [
     {
-      title: "Regional Hospital Network",
-      challenge: "Legacy EHR system causing delays and errors",
-      solution: "Implemented modern cloud-based EHR with seamless integration",
-      results: "40% reduction in administrative time, 99.9% uptime",
+      title: "Luxury Resort Chain",
+      challenge: "Disconnected systems causing guest service delays and operational inefficiencies",
+      solution: "Implemented integrated PMS with mobile check-in and guest communication platform",
+      results: "45% faster check-in, 35% increase in guest satisfaction scores",
     },
     {
-      title: "Medical Practice Group",
-      challenge: "HIPAA compliance concerns and data security risks",
-      solution:
-        "Complete security audit and implementation of compliant infrastructure",
-      results: "Full HIPAA compliance, zero security incidents in 2 years",
+      title: "Boutique Hotel Group",
+      challenge: "Manual revenue management and lack of data insights",
+      solution: "Deployed cloud-based revenue management system with real-time analytics dashboard",
+      results: "22% increase in RevPAR, 18% improvement in occupancy rates",
     },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-professional-darkBlue/90 to-professional-darkBlue/90 text-white mt-8">
+      <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-indigo-800 text-white mt-8">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop"
-            alt="Healthcare technology"
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop"
+            alt="Luxury hotel lobby"
             className="w-full h-full object-cover opacity-20"
           />
         </div>
@@ -85,18 +72,17 @@ const HealthcareIndustry = () => {
           <div className="max-w-3xl">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-0 mb-6">
               <div className="bg-white/20 p-3 sm:p-4 rounded-lg mr-0 sm:mr-4">
-                <Stethoscope className="w-8 h-8 sm:w-12 sm:h-12" />
+                <Hotel className="w-8 h-8 sm:w-12 sm:h-12" />
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold">
-                Healthcare IT Solutions
+                Hospitality Technology Solutions
               </h1>
             </div>
-            <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8">
-              Transform patient care with secure, compliant, and innovative
-              healthcare technology solutions
+            <p className="text-lg sm:text-xl lg:text-2xl text-purple-100 mb-6 sm:mb-8">
+              Elevate guest experiences and streamline operations with innovative hospitality technology
             </p>
             <Link to="/contact">
-              <button className="bg-white text-professional-darkBlue px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm sm:text-base w-full sm:w-auto">
+              <button className="bg-white text-purple-600 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-sm sm:text-base w-full sm:w-auto">
                 Schedule a Consultation
               </button>
             </Link>
@@ -110,40 +96,38 @@ const HealthcareIndustry = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Healthcare Technology That Puts Patients First
+                Technology That Transforms Guest Experiences
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                In healthcare, technology must enhance patient care while
-                maintaining the highest standards of security and compliance.
-                Our solutions are designed specifically for healthcare
-                providers, from small practices to large hospital systems.
+                In the hospitality industry, technology should enhance every touchpoint of the guest journey 
+                while empowering your team to deliver exceptional service. Our solutions are designed specifically 
+                for hotels, resorts, and hospitality groups of all sizes.
               </p>
               <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
-                We understand the unique challenges of healthcare IT - from
-                regulatory compliance to interoperability, data security to
-                clinical workflows. Our team brings deep expertise in healthcare
-                technology and a commitment to supporting your mission of
-                exceptional patient care.
+                We understand the unique challenges of hospitality operations - from managing reservations 
+                and guest communications to optimizing revenue and ensuring seamless integrations. Our team 
+                brings deep expertise in hospitality technology and a commitment to supporting your mission 
+                of creating memorable guest experiences.
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-blue-50 p-4 sm:p-6 rounded-lg">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-professional-darkBlue mb-1 sm:mb-2">
-                    99.9%
+                <div className="bg-purple-50 p-4 sm:p-6 rounded-lg">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">
+                    99.8%
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600">System Uptime</div>
                 </div>
-                <div className="bg-blue-50 p-4 sm:p-6 rounded-lg">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-professional-darkBlue mb-1 sm:mb-2">
-                    100%
+                <div className="bg-purple-50 p-4 sm:p-6 rounded-lg">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">
+                    24/7
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600">HIPAA Compliant</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Support Available</div>
                 </div>
               </div>
             </div>
             <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
               <img
-                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop"
-                alt="Healthcare professionals"
+                src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&h=600&fit=crop"
+                alt="Hotel reception"
                 className="rounded-lg shadow-xl sm:shadow-2xl w-full"
               />
             </div>
@@ -156,11 +140,10 @@ const HealthcareIndustry = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Comprehensive Healthcare IT Solutions
+              Comprehensive Hospitality IT Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
-              From compliance to care delivery, we provide end-to-end technology
-              solutions for modern healthcare
+              From front desk to back office, we provide end-to-end technology solutions for modern hospitality
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -169,8 +152,8 @@ const HealthcareIndustry = () => {
                 key={index}
                 className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
               >
-                <div className="bg-blue-100 w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-                  <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-professional-darkBlue" />
+                <div className="bg-purple-100 w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
+                  <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-purple-600" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
                   {solution.title}
@@ -188,18 +171,18 @@ const HealthcareIndustry = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
-                alt="Medical technology"
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&h=600&fit=crop"
+                alt="Hotel technology"
                 className="rounded-lg shadow-xl sm:shadow-2xl w-full"
               />
             </div>
             <div className="order-1 lg:order-2 mb-8 lg:mb-0">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Benefits of Modern Healthcare IT
+                Benefits of Modern Hospitality Technology
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
-                Investing in the right healthcare technology delivers measurable
-                improvements across your organization
+                Investing in the right hospitality technology delivers measurable improvements 
+                in guest satisfaction and operational efficiency
               </p>
               <ul className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
@@ -222,7 +205,7 @@ const HealthcareIndustry = () => {
               Success Stories
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 px-2 sm:px-0">
-              Real results for healthcare organizations
+              Real results for hospitality organizations
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -246,7 +229,7 @@ const HealthcareIndustry = () => {
                     <div className="text-xs sm:text-sm font-semibold text-gray-500 mb-1 sm:mb-2">
                       Results
                     </div>
-                    <p className="text-professional-darkBlue font-semibold text-sm sm:text-base">
+                    <p className="text-purple-600 font-semibold text-sm sm:text-base">
                       {study.results}
                     </p>
                   </div>
@@ -258,24 +241,21 @@ const HealthcareIndustry = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-professional-darkBlue text-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-            Ready to Transform Your Healthcare IT?
+            Ready to Transform Your Hospitality Technology?
           </h2>
-          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-blue-100 px-2 sm:px-0">
-            Let's discuss how our healthcare-specific solutions can support your
-            organization's goals
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-purple-100 px-2 sm:px-0">
+            Let's discuss how our hospitality-specific solutions can enhance your guest experience 
+            and improve your operations
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link to="/contact">
-              <button className="bg-white text-professional-darkBlue px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm sm:text-base w-full sm:w-auto">
+              <button className="bg-white text-purple-600 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-sm sm:text-base w-full sm:w-auto">
                 Schedule Consultation
               </button>
             </Link>
-            {/* <button className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm sm:text-base w-full sm:w-auto">
-              Download Healthcare Guide
-            </button> */}
           </div>
         </div>
       </section>
@@ -283,4 +263,4 @@ const HealthcareIndustry = () => {
   );
 };
 
-export default HealthcareIndustry;
+export default HospitalityIndustry;
