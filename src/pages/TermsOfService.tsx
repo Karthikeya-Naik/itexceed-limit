@@ -120,31 +120,31 @@ const TermsOfService = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-accent/30 to-background">
+        <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-professional-darkBlue rounded-xl sm:rounded-2xl mb-4 sm:mb-6">
               <Scale className="w-8 h-8 sm:w-10 sm:h-10 text-primary-foreground" />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-200 mb-4 sm:mb-6">
               Terms of Service
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground px-2 sm:px-0">
+            <p className="text-base sm:text-lg text-gray-300 px-2 sm:px-0">
               Please read these terms carefully before using our services. These terms govern your use of ITExceed's services and website.
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4">
+            <p className="text-xs sm:text-sm text-gray-300 mt-3 sm:mt-4">
               Last Updated: {lastUpdated}
             </p>
           </div>
         </section>
 
         {/* Introduction */}
-        <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-professional-darkBlue p-4 sm:p-6 rounded-r-lg mb-8 sm:mb-12">
-              <p className="text-foreground leading-relaxed text-sm sm:text-base">
+            <div className="bg-gray-800/60 border-l-4 border-blue-600 p-4 sm:p-6 rounded-r-lg mb-8 sm:mb-12">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 These Terms of Service ("Terms") constitute a legally binding agreement between you and ITExceed regarding your use of our services, website, and related applications. These terms apply to all users, clients, and visitors. By accessing or using any part of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy.
               </p>
             </div>
@@ -152,7 +152,7 @@ const TermsOfService = () => {
         </section>
 
         {/* Main Content Sections */}
-        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto space-y-12 sm:space-y-16">
             {sections.map((section, index) => {
               const IconComponent = section.icon;
@@ -162,18 +162,18 @@ const TermsOfService = () => {
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-professional-darkBlue rounded-lg flex items-center justify-center flex-shrink-0 mb-2 sm:mb-0">
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground pt-0 sm:pt-2">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 pt-0 sm:pt-2">
                       {section.title}
                     </h2>
                   </div>
                   
                   <div className="space-y-4 sm:space-y-6 sm:ml-16">
                     {section.content.map((item, idx) => (
-                      <div key={idx} className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
+                      <div key={idx} className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-2 sm:mb-3">
                           {item.subtitle}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                           {item.text}
                         </p>
                       </div>
@@ -186,16 +186,16 @@ const TermsOfService = () => {
         </section>
 
         {/* Additional Terms */}
-        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
             {/* Intellectual Property */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Intellectual Property Rights</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border space-y-3 sm:space-y-4">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Intellectual Property Rights</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600 space-y-3 sm:space-y-4">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   All content, materials, software, and services provided by ITExceed, including but not limited to text, graphics, logos, images, and software, are the property of ITExceed or its licensors and are protected by copyright, trademark, and other intellectual property laws.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   You are granted a limited, non-exclusive, non-transferable license to access and use our services for your internal business purposes. You may not copy, modify, distribute, sell, or lease any part of our services or included content without explicit written permission.
                 </p>
               </div>
@@ -203,12 +203,12 @@ const TermsOfService = () => {
 
             {/* Confidentiality */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Confidentiality</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border space-y-3 sm:space-y-4">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Confidentiality</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600 space-y-3 sm:space-y-4">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Both parties agree to maintain the confidentiality of any proprietary or confidential information disclosed during the course of our business relationship. This includes technical data, business strategies, customer information, and any information marked as confidential.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Confidential information does not include information that is publicly available, independently developed, or rightfully received from a third party without confidentiality obligations.
                 </p>
               </div>
@@ -216,12 +216,12 @@ const TermsOfService = () => {
 
             {/* Termination */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Termination</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border space-y-3 sm:space-y-4">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Termination</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600 space-y-3 sm:space-y-4">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Either party may terminate services in accordance with the terms specified in your service agreement. We reserve the right to suspend or terminate your access to our services immediately if you breach these Terms or engage in fraudulent or illegal activities.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Upon termination, you must cease all use of our services, and we will make reasonable efforts to return or destroy your confidential information as specified in your service agreement. You remain liable for all fees incurred prior to termination.
                 </p>
               </div>
@@ -229,9 +229,9 @@ const TermsOfService = () => {
 
             {/* Indemnification */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Indemnification</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Indemnification</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   You agree to indemnify, defend, and hold harmless ITExceed, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from your use of our services, your violation of these Terms, or your violation of any rights of another party.
                 </p>
               </div>
@@ -239,12 +239,12 @@ const TermsOfService = () => {
 
             {/* Dispute Resolution */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Dispute Resolution</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border space-y-3 sm:space-y-4">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Dispute Resolution</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600 space-y-3 sm:space-y-4">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Any disputes arising from these Terms or our services shall first be attempted to be resolved through good faith negotiations. If negotiations fail, disputes shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   You agree to waive any right to a jury trial and to participate in class action lawsuits regarding disputes with ITExceed.
                 </p>
               </div>
@@ -252,9 +252,9 @@ const TermsOfService = () => {
 
             {/* Governing Law */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Governing Law</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Governing Law</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which ITExceed operates, without regard to its conflict of law provisions. Any legal action or proceeding shall be brought exclusively in the courts located in that jurisdiction.
                 </p>
               </div>
@@ -262,9 +262,9 @@ const TermsOfService = () => {
 
             {/* Severability */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Severability</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Severability</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect and enforceable.
                 </p>
               </div>
@@ -272,9 +272,9 @@ const TermsOfService = () => {
 
             {/* Entire Agreement */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Entire Agreement</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Entire Agreement</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   These Terms, together with any service agreements and our Privacy Policy, constitute the entire agreement between you and ITExceed regarding the use of our services and supersede all prior agreements and understandings, whether written or oral.
                 </p>
               </div>

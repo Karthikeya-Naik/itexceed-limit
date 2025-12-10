@@ -20,12 +20,12 @@ const CTASection = ({
   secondaryButtonLink,
 }: CTASectionProps) => {
   return (
-    <section className="py-20 bg-professional-darkBlue">
+    <section className="py-20 bg-orange-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">{title}</h2>
         <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">{description}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" variant="secondary" className="text-base group">
+          <Button asChild size="lg" variant="secondary" className="text-base border-primary-foreground text-gray-700-foreground hover:bg-gray-200 hover:text-gray-900">
             <Link to={primaryButtonLink}>
               {primaryButtonText}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -33,7 +33,7 @@ const CTASection = ({
           </Button>
           {secondaryButtonText && secondaryButtonLink && (
             // border-white text-white hover:bg-white hover:text-professional-darkBlue
-            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-black-foreground hover:bg-primary-foreground hover:text-professional-darkBlue">
+            <Button asChild size="lg" variant="outline" className="text-base border-primary-foreground text-gray-700-foreground hover:bg-gray-200 hover:text-gray-900">
               <Link to={secondaryButtonLink}>{secondaryButtonText}</Link>
             </Button>
           )}

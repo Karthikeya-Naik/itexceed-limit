@@ -1,7 +1,7 @@
 import { Building2, Shield, Lock, TrendingUp, Globe, CheckCircle, ArrowLeft, CreditCard } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const FinanceBankingIndustry = () => {
+const FinanceBanking = () => {
   const solutions = [
     {
       icon: Shield,
@@ -59,9 +59,9 @@ const FinanceBankingIndustry = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-teal-700 text-white mt-8">
+      <section className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-teal-700 text-white ">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop"
@@ -96,27 +96,27 @@ const FinanceBankingIndustry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4 sm:mb-6">
                 Building Trust Through Technology
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 In the financial services industry, security, reliability, and compliance are non-negotiable. Our solutions are built from the ground up with these principles at their core, enabling you to serve your customers with confidence.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From traditional banks to fintech startups, we provide the technology infrastructure that supports secure transactions, meets regulatory requirements, and delivers exceptional customer experiences across all channels.
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-emerald-50 p-4 sm:p-6 rounded-lg">
+                <div className="bg-gray-800/60 p-4 sm:p-6 rounded-lg">
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-600 mb-1 sm:mb-2">99.99%</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Transaction Success</div>
+                  <div className="text-xs sm:text-sm text-gray-200">Transaction Success</div>
                 </div>
-                <div className="bg-emerald-50 p-4 sm:p-6 rounded-lg">
+                <div className="bg-gray-800/60 p-4 sm:p-6 rounded-lg">
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-600 mb-1 sm:mb-2">24/7</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Security Monitoring</div>
+                  <div className="text-xs sm:text-sm text-gray-200">Security Monitoring</div>
                 </div>
               </div>
             </div>
@@ -132,24 +132,24 @@ const FinanceBankingIndustry = () => {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Complete Financial Technology Solutions
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
               From payment processing to core banking, we deliver secure and scalable solutions for modern financial institutions
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-gray-800/50 p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <div className="bg-emerald-100 w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
                   <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-emerald-600" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">{solution.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base">{solution.description}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-200">{solution.title}</h3>
+                <p className="text-gray-400 text-sm sm:text-base">{solution.description}</p>
               </div>
             ))}
           </div>
@@ -157,7 +157,7 @@ const FinanceBankingIndustry = () => {
       </section>
 
       {/* Security Features Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -168,17 +168,17 @@ const FinanceBankingIndustry = () => {
               />
             </div>
             <div className="order-1 lg:order-2 mb-8 lg:mb-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
                 Enterprise-Grade Security
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8">
                 Our security-first approach ensures your financial data and transactions are protected with the latest security technologies and best practices.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {securityFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500 mr-2 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700 text-sm sm:text-base">{feature}</span>
+                    <span className="text-gray-400 text-sm sm:text-base">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -188,21 +188,21 @@ const FinanceBankingIndustry = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
                 Transform Your Financial Services
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8">
                 Modern financial technology that drives growth, reduces risk, and enhances customer satisfaction
               </p>
               <ul className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-base sm:text-lg text-gray-700">{benefit}</span>
+                    <span className="text-base sm:text-lg text-gray-400">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -219,7 +219,7 @@ const FinanceBankingIndustry = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 text-white">
             <div className="max-w-3xl mx-auto text-center">
@@ -309,4 +309,4 @@ const FinanceBankingIndustry = () => {
   );
 };
 
-export default FinanceBankingIndustry;
+export default FinanceBanking;

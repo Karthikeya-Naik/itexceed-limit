@@ -9,89 +9,101 @@ const Services = () => {
       title: "IT Support & Helpdesk",
       description: "Comprehensive technical support for your business operations with 24/7 availability",
       image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop",
-      link: "/services/it-services"
+      link: "/services/it-services",
+      color: "blue"
     },
     {
       icon: Network,
       title: "Network Infrastructure",
       description: "Robust network design, implementation, and optimization services",
       image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
-      link: "/services/network-infrastructure"
+      link: "/services/network-infrastructure",
+      color: "green"
     },
     {
       icon: Code,
       title: "Printing & Designing",
       description: "Professional printing and graphic design services for all your branding needs",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-      link: "/services/printing-designing"
+      link: "/services/printing-designing",
+      color: "purple"
     },
     {
       icon: Cloud,
       title: "Cloud Solutions",
       description: "Modern cloud infrastructure and migration services for scalable business growth",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      link: "/services/cloud-services"
+      link: "/services/cloud-services",
+      color: "purple"
     },
     {
       icon: Code,
       title: "Web Development",
       description: "Custom websites and web applications built with modern technologies",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-      link: "/services/web-development"
+      link: "/services/web-development",
+      color: "indigo"
     },
     {
       icon: Shield,
       title: "Cybersecurity Services",
       description: "Advanced security solutions to protect your business from evolving threats",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop",
-      link: "/services/cybersecurity"
+      link: "/services/cybersecurity",
+      color: "red"
     },
     {
       icon: Database,
       title: "Data Management",
       description: "Secure and efficient data storage, backup, and analytics solutions",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-      link: "/services/data-management"
+      link: "/services/data-management",
+      color: "blue"
     },
     {
       icon: Server,
       title: "Server Management",
       description: "Reliable server infrastructure with proactive monitoring and maintenance",
       image: "https://plus.unsplash.com/premium_photo-1683134018612-560033455e43?w=600&h=400&fit=crop",
-      link: "/services/server-management"
+      link: "/services/server-management",
+      color: "green"
     },
     {
       icon: Mail,
       title: "Email & Collaboration",
       description: "Professional email systems and collaboration tools for seamless communication",
       image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&h=400&fit=crop",
-      link: "/services/email-collaboration"
+      link: "/services/email-collaboration",
+      color: "indigo"
     },
     {
       icon: HardDrive,
       title: "Backup & Disaster Recovery",
       description: "Comprehensive business continuity solutions to protect your operations",
       image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&h=400&fit=crop",
-      link: "/services/backup-recovery"
+      link: "/services/backup-recovery",
+      color: "blue"
     },
     {
       icon: Wifi,
       title: "Wireless Solutions",
       description: "Enterprise-grade wireless networking with optimal coverage and security",
       image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=600&h=400&fit=crop",
-      link: "/services/wireless-network"
+      link: "/services/wireless-network",
+      color: "indigo"
     },
     {
       icon: Lock,
       title: "Access Control & Identity",
       description: "Secure identity and access management with multi-factor authentication",
       image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=600&h=400&fit=crop",
-      link: "/services/access-control"
+      link: "/services/access-control",
+      color: "red"
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section with Background Image */}
       <section className="relative h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -115,17 +127,17 @@ const Services = () => {
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-200 mb-4 sm:mb-6">
                 What We Offer
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 We provide comprehensive IT solutions that drive business growth and operational excellence. Our expert team delivers cutting-edge technology services tailored to your unique business needs.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From cloud infrastructure to cybersecurity, from software development to IT support, we offer end-to-end solutions that keep your business running smoothly and securely.
               </p>
               <div className="space-y-3 sm:space-y-4">
@@ -136,12 +148,12 @@ const Services = () => {
                   "Cutting-edge technology implementation"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-professional-darkBlue flex items-center justify-center flex-shrink-0">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
                       <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-sm sm:text-base text-gray-700">{item}</span>
+                    <span className="text-sm sm:text-base text-gray-300">{item}</span>
                   </div>
                 ))}
               </div>
@@ -160,13 +172,13 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-200 mb-4">
               Our Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Explore our comprehensive range of IT services designed to help your business thrive in the digital age
             </p>
           </div>
@@ -174,11 +186,19 @@ const Services = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
+              const colorClasses = {
+                blue: "bg-blue-100 text-blue-600",
+                green: "bg-blue-100 text-blue-600",
+                purple: "bg-blue-100 text-blue-600",
+                indigo: "bg-blue-100 text-blue-600",
+                red: "bg-blue-100 text-blue-600"
+              };
+              
               return (
                 <Link
                   key={index}
                   to={service.link}
-                  className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2"
+                  className="group bg-gray-800/50 backdrop-blur-sm rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 border border-gray-700"
                 >
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img 
@@ -189,20 +209,20 @@ const Services = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-professional-darkBlue" />
+                      <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center ${colorClasses[service.color]}`}>
+                        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                     </div>
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-professional-darkBlue transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 group-hover:text-blue-400 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-2">
+                    <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 line-clamp-2">
                       {service.description}
                     </p>
-                    <div className="flex items-center text-professional-darkBlue font-semibold text-sm sm:text-base group-hover:gap-2 transition-all">
+                    <div className="flex items-center text-blue-400 font-semibold text-sm sm:text-base group-hover:gap-2 transition-all">
                       <span>Learn More</span>
                       <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -215,7 +235,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-professional-darkBlue to-professional-darkBlue/80">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-600/80">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
             Need a Custom Solution?
@@ -225,7 +245,7 @@ const Services = () => {
           </p>
           <a 
             href="/contact"
-            className="inline-block bg-white text-professional-darkBlue px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg text-sm sm:text-base w-full sm:w-auto"
+            className="inline-block bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg text-sm sm:text-base w-full sm:w-auto"
           >
             Schedule a Consultation
           </a>

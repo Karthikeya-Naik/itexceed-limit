@@ -36,13 +36,16 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <p className="text-xs sm:text-sm font-semibold text-orange-500 mb-2 tracking-wider uppercase">
+            ENTERPRISE SOLUTIONS
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             IT Products & Solutions
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto px-4">
             Discover our comprehensive range of hardware, software, and licensing solutions 
             tailored for modern businesses
           </p>
@@ -52,15 +55,15 @@ const ProductsSection = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg sm:rounded-xl p-6 sm:p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg sm:rounded-xl p-6 sm:p-8 text-center hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-professional-darkBlue/10 text-professional-darkBlue rounded-lg sm:rounded-xl mb-3 sm:mb-4">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500/10 to-orange-600/5 text-orange-400 rounded-lg sm:rounded-xl mb-3 sm:mb-4">
                 {category.icon}
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
                 {category.title}
               </h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 {category.brands}
               </p>
             </div>
@@ -69,7 +72,7 @@ const ProductsSection = () => {
 
         <div className="text-center mt-8 sm:mt-12">
           <a href="/products">
-            <button className="bg-professional-darkBlue text-primary-foreground px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold hover:bg-professional-darkBlue/90 transition-colors text-sm sm:text-base">
+            <button className="bg-orange-600 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-sm sm:text-base hover:shadow-lg hover:shadow-orange-500/20">
               View All Products
             </button>
           </a>

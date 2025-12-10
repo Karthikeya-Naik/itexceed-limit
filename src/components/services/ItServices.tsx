@@ -75,9 +75,9 @@ const ITSupportDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&h=900&fit=crop" 
@@ -119,7 +119,7 @@ const ITSupportDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gray-50">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -127,7 +127,7 @@ const ITSupportDetail = () => {
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-200 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -135,25 +135,25 @@ const ITSupportDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
                 Professional IT Support That Keeps You Running
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 Our IT Support & Helpdesk services provide comprehensive technical assistance to keep your business operations running smoothly. We understand that technology issues can disrupt productivity, which is why we offer fast, reliable support whenever you need it.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From troubleshooting software problems to managing hardware issues, our experienced team handles all aspects of IT support. We combine reactive support with proactive monitoring to prevent issues before they impact your business.
               </p>
               
               <div className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-0.5 sm:mt-1" />
-                    <span className="text-sm sm:text-base text-gray-700">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-0.5 sm:mt-1" />
+                    <span className="text-sm sm:text-base text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -172,13 +172,13 @@ const ITSupportDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4">
               Why Choose Our IT Support?
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               We deliver exceptional support with features designed to minimize downtime and maximize your team's productivity.
             </p>
           </div>
@@ -187,14 +187,14 @@ const ITSupportDetail = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl border border-gray-700 transform hover:scale-105 transition-all duration-300">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-300">
                     {feature.description}
                   </p>
                 </div>
@@ -205,20 +205,20 @@ const ITSupportDetail = () => {
       </section>
 
       {/* Services We Provide */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4">
               Comprehensive Support Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Our full-spectrum IT support covers every aspect of your technology infrastructure.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+              <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                 <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                   <img 
                     src={service.image} 
@@ -230,10 +230,10 @@ const ITSupportDetail = () => {
                 </div>
                 
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-300">
                     {service.description}
                   </p>
                 </div>
@@ -244,7 +244,7 @@ const ITSupportDetail = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -279,7 +279,7 @@ const ITSupportDetail = () => {
               },
             ].map((item, index) => (
               <div key={index} className="text-center relative">
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-600/70 mb-3 sm:mb-4">{item.step}</div>
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-600/80 mb-3 sm:mb-4">{item.step}</div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{item.title}</h3>
                 <p className="text-sm sm:text-base text-gray-300">{item.desc}</p>
                 {index < 0 && (
@@ -292,7 +292,7 @@ const ITSupportDetail = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-600/80">
         <div className="max-w-4xl mx-auto text-center">
           <Award className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-white mx-auto mb-4 sm:mb-6" />
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">

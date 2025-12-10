@@ -268,9 +268,9 @@ const WebDevelopmentDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80" 
@@ -295,7 +295,7 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-3 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -303,7 +303,7 @@ const WebDevelopmentDetail = () => {
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-purple-600 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-200 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -311,7 +311,7 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8  bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1 mb-8 lg:mb-0">
@@ -323,21 +323,21 @@ const WebDevelopmentDetail = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4 sm:mb-6">
                 Transform Your Vision Into Reality
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 In today's digital age, your website is often the first impression customers have of your business. We create stunning, high-performance websites and web applications that engage users and drive results.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From simple landing pages to complex enterprise applications, our team of expert developers uses cutting-edge technologies to build solutions that are fast, secure, and scalable.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -347,7 +347,7 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -380,13 +380,13 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Tech Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8  bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Advanced Technology Stack
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               Leveraging the latest tools and frameworks for superior results.
             </p>
           </div>
@@ -418,33 +418,33 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Technologies */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Full-Stack Development
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               Complete web solutions from frontend to backend.
             </p>
           </div>
 
           <div className="space-y-6 sm:space-y-8">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
+              <div key={index} className="bg-gray-800/50 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className={`p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-3 sm:mb-4">
                       {tech.name}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+                    <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                       {tech.description}
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       {tech.features.map((feat, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-purple-600" />
-                          <span className="text-gray-700">{feat}</span>
+                          <span className="text-gray-300">{feat}</span>
                         </div>
                       ))}
                     </div>
@@ -465,13 +465,13 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Services */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Our Web Development Services
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               Comprehensive solutions for all your web development needs.
             </p>
           </div>
@@ -480,7 +480,7 @@ const WebDevelopmentDetail = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -496,10 +496,10 @@ const WebDevelopmentDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-400">
                       {service.description}
                     </p>
                   </div>
@@ -511,7 +511,7 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
@@ -529,7 +529,7 @@ const WebDevelopmentDetail = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
+                <p className="text-gray-400 text-xs sm:text-sm">
                   {useCase.description}
                 </p>
               </div>
@@ -539,22 +539,22 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Technologies We Use
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Modern frameworks and tools for cutting-edge solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {techStack.map((tech, index) => (
-              <div key={index} className="bg-white p-4 sm:p-6 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all text-center">
+              <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl border-2 border-gray-700 hover:border-purple-800 hover:shadow-lg transition-all text-center">
                 <div className="text-purple-600 mb-2 sm:mb-3 flex justify-center">{tech.icon}</div>
-                <div className="font-semibold text-xs sm:text-sm text-gray-700">{tech.name}</div>
+                <div className="font-semibold text-xs sm:text-sm text-gray-300">{tech.name}</div>
               </div>
             ))}
           </div>
@@ -562,13 +562,13 @@ const WebDevelopmentDetail = () => {
       </section>
 
       {/* Process */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Our Development Process
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               A proven approach to deliver exceptional results.
             </p>
           </div>
@@ -585,8 +585,8 @@ const WebDevelopmentDetail = () => {
                 <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl font-bold mx-auto mb-3 sm:mb-4 shadow-lg">
                   {item.step}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-900">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-200">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-400">{item.desc}</p>
                 {index < 4 && (
                   <div className="hidden lg:block absolute top-6 sm:top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
                 )}

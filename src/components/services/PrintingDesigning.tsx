@@ -146,9 +146,9 @@ const PrintingDesigningDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1600&q=80" 
@@ -189,25 +189,25 @@ const PrintingDesigningDetail = () => {
       </section> */}
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8  bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
                 Creative Design Meets Premium Printing
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 Your brand deserves to stand out. Whether you need eye-catching marketing materials, professional business stationery, or large-format displays, our integrated design and printing services deliver exceptional results that make a lasting impression.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From concept to completion, our creative team and state-of-the-art printing facilities work together to ensure your vision becomes reality. We combine artistic excellence with technical precision to produce materials that not only look stunning but also drive results.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -225,7 +225,7 @@ const PrintingDesigningDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -258,13 +258,13 @@ const PrintingDesigningDetail = () => {
       </section>
 
       {/* Printing Services */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Professional Printing Services
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               High-quality printing solutions for all your business and marketing needs.
             </p>
           </div>
@@ -273,7 +273,7 @@ const PrintingDesigningDetail = () => {
             {printingServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -289,10 +289,10 @@ const PrintingDesigningDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-100 mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-200">
                       {service.description}
                     </p>
                   </div>
@@ -347,31 +347,31 @@ const PrintingDesigningDetail = () => {
       </section> */}
 
       {/* Printing Options */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Printing Technologies
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               Multiple printing methods to meet your specific requirements and budget.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {printingOptions.map((option, index) => (
-              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-2 border-gray-200 hover:border-purple-500 transition-all">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+              <div key={index} className="bg-gray-800/50 p-6 sm:p-8 rounded-xl shadow-lg border-2 border-gray-700/80 hover:border-purple-500 transition-all">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-3">
                   {option.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+                <p className="text-sm sm:text-base text-gray-200 mb-4 sm:mb-6">
                   {option.description}
                 </p>
                 <div className="space-y-2">
                   {option.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-purple-600" />
-                      <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
+                      <span className="text-xs sm:text-sm text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -382,7 +382,7 @@ const PrintingDesigningDetail = () => {
       </section>
 
       {/* Materials Grid */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
@@ -405,13 +405,13 @@ const PrintingDesigningDetail = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Our Design & Print Process
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Simple, streamlined workflow from concept to delivery.
             </p>
           </div>
@@ -429,7 +429,7 @@ const PrintingDesigningDetail = () => {
                   {item.step}
                 </div>
                 <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-900">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>
+                <p className="text-xs sm:text-sm text-gray-300">{item.desc}</p>
                 {index < 4 && (
                   <div className="hidden lg:block absolute top-6 sm:top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 )}

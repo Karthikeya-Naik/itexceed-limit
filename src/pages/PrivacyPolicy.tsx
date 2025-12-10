@@ -106,21 +106,21 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-accent/30 to-background">
+        <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-professional-darkBlue rounded-xl sm:rounded-2xl mb-4 sm:mb-6">
-              <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-primary-foreground" />
+              <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-blue-300" />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-4 sm:mb-6">
               Privacy Policy
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground px-2 sm:px-0">
+            <p className="text-base sm:text-lg text-gray-300 px-2 sm:px-0">
               Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4">
+            <p className="text-xs sm:text-sm text-gray-300 mt-3 sm:mt-4">
               Last Updated: {lastUpdated}
             </p>
           </div>
@@ -129,8 +129,8 @@ const PrivacyPolicy = () => {
         {/* Introduction */}
         <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-professional-darkBlue p-4 sm:p-6 rounded-r-lg mb-8 sm:mb-12">
-              <p className="text-foreground leading-relaxed text-sm sm:text-base">
+            <div className="bg-gray-800/60 border-l-4 border-blue-600 p-4 sm:p-6 rounded-r-lg mb-8 sm:mb-12">
+              <p className="text-gray-200 leading-relaxed text-sm sm:text-base">
                 ITExceed ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services. By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </div>
@@ -138,7 +138,7 @@ const PrivacyPolicy = () => {
         </section>
 
         {/* Main Content Sections */}
-        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <div className="max-w-4xl mx-auto space-y-12 sm:space-y-16">
             {sections.map((section, index) => {
               const IconComponent = section.icon;
@@ -148,18 +148,18 @@ const PrivacyPolicy = () => {
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-professional-darkBlue rounded-lg flex items-center justify-center flex-shrink-0 mb-2 sm:mb-0">
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground pt-0 sm:pt-2">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 pt-0 sm:pt-2">
                       {section.title}
                     </h2>
                   </div>
                   
                   <div className="space-y-4 sm:space-y-6 sm:ml-16">
                     {section.content.map((item, idx) => (
-                      <div key={idx} className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
+                      <div key={idx} className="bg-gray-800/60 p-4 sm:p-6 rounded-lg border border-gray-600">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-2 sm:mb-3">
                           {item.subtitle}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                           {item.text}
                         </p>
                       </div>
@@ -176,12 +176,12 @@ const PrivacyPolicy = () => {
           <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
             {/* Cookies */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Cookies and Tracking Technologies</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border space-y-3 sm:space-y-4">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Cookies and Tracking Technologies</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600 space-y-3 sm:space-y-4">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are small data files that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device until deleted) to provide you with a more personal and interactive experience on our website.
                 </p>
               </div>
@@ -189,9 +189,9 @@ const PrivacyPolicy = () => {
 
             {/* Third Party Links */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Third-Party Links</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Third-Party Links</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Our website may contain links to third-party websites that are not operated by us. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services. We encourage you to review the privacy policy of every site you visit.
                 </p>
               </div>
@@ -199,9 +199,9 @@ const PrivacyPolicy = () => {
 
             {/* Children's Privacy */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Children's Privacy</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Children's Privacy</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can delete such information.
                 </p>
               </div>
@@ -209,9 +209,9 @@ const PrivacyPolicy = () => {
 
             {/* International Users */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">International Data Transfers</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">International Data Transfers</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Your information may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ. By using our services, you consent to such transfers.
                 </p>
               </div>
@@ -219,9 +219,9 @@ const PrivacyPolicy = () => {
 
             {/* Changes to Policy */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Changes to This Privacy Policy</h2>
-              <div className="bg-background p-4 sm:p-6 rounded-lg border border-border">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4 sm:mb-6">Changes to This Privacy Policy</h2>
+              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
                 </p>
               </div>
@@ -233,7 +233,7 @@ const PrivacyPolicy = () => {
         <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 bg-professional-darkBlue">
           <div className="max-w-4xl mx-auto text-center">
             <Mail className="w-12 h-12 sm:w-16 sm:h-16 text-white mx-auto mb-4 sm:mb-6" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 px-2 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 px-2 sm:px-0 ">
               Questions About Our Privacy Policy?
             </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 px-2 sm:px-0">

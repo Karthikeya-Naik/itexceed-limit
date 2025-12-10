@@ -51,22 +51,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-accent/30 to-background">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/50">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-200 mb-4 sm:mb-6">
               Contact Us
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground px-4">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-400 px-4">
               Get in touch with our team. We're here to help with all your IT needs.
             </p>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
               {/* Contact Information */}
@@ -80,10 +80,10 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent className="space-y-3 sm:space-y-4">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-professional-darkBlue mt-1 flex-shrink-0" />
+                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-xs sm:text-sm">Address</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className="font-semibold text-xs sm:text-sm text-gray-100">Address</p>
+                        <p className="text-xs sm:text-sm text-gray-400">
                           16 Devalls Close<br />
                           London, England, E6 5PL
                         </p>
@@ -91,35 +91,35 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-professional-darkBlue mt-1 flex-shrink-0" />
+                      <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-xs sm:text-sm">Phone</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">+44 20 1234 5678</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">+44 20 8765 4321</p>
+                        <p className="font-semibold text-xs sm:text-sm text-gray-100">Phone</p>
+                        <p className="text-xs sm:text-sm text-gray-400">+44 20 1234 5678</p>
+                        <p className="text-xs sm:text-sm text-gray-400">+44 20 8765 4321</p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-professional-darkBlue mt-1 flex-shrink-0" />
+                      <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-xs sm:text-sm">Email</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">sales@itexceed.com</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">support@itexceed.com</p>
+                        <p className="font-semibold text-xs sm:text-sm text-gray-100">Email</p>
+                        <p className="text-xs sm:text-sm text-gray-400">sales@itexceed.com</p>
+                        <p className="text-xs sm:text-sm text-gray-400">support@itexceed.com</p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-professional-darkBlue mt-1 flex-shrink-0" />
+                      <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-xs sm:text-sm">Business Hours</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">Monday - Friday: 9AM - 6PM</p>
-                        <p className="text-xs sm:text-sm text-muted-foreground">24/7 Emergency Support Available</p>
+                        <p className="font-semibold text-xs sm:text-sm text-gray-100">Business Hours</p>
+                        <p className="text-xs sm:text-sm text-gray-400">Monday - Friday: 9AM - 6PM</p>
+                        <p className="text-xs sm:text-sm text-gray-400">24/7 Emergency Support Available</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-professional-darkBlue text-primary-foreground">
+                <Card className="bg-gradient-to-b from-gray-900 to-gray-800/50 text-gray-200">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-lg sm:text-xl">Emergency Support</CardTitle>
                     <CardDescription className="text-primary-foreground/80 text-xs sm:text-sm">
@@ -222,7 +222,7 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full text-sm sm:text-base">
+                      <Button type="submit" size="lg" className="w-full text-sm sm:text-base bg-blue-700">
                         Send Message
                       </Button>
                     </form>

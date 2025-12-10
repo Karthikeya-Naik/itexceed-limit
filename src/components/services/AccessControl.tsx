@@ -71,10 +71,10 @@ const AccessControlDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 to-gray-800/50">
           <img 
             src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1600&h=900&fit=crop" 
             alt="Access Control"
@@ -114,15 +114,15 @@ const AccessControlDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-100 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -130,17 +130,17 @@ const AccessControlDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4 sm:mb-6">
                 Control Who Accesses What, When, and How
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 80% of data breaches involve compromised credentials. Traditional password-only security is no longer enough. Your business needs modern identity and access management that protects without creating friction for legitimate users.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 Our access control solutions provide robust security through multi-factor authentication, single sign-on, and intelligent access policies that adapt to user behavior and risk levels.
               </p>
               
@@ -148,13 +148,13 @@ const AccessControlDetail = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
+                    <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
+            <div className="relative order-1 lg:order-2 mb-8 lg:mb-0 bg-gradient-to-b from-gray-900 to-gray-800/30">
               <img 
                 src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=500&fit=crop" 
                 alt="Access Control"
@@ -167,7 +167,7 @@ const AccessControlDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/50 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -200,13 +200,13 @@ const AccessControlDetail = () => {
       </section>
 
       {/* Services */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4">
               Our Access Control Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto px-4">
               Complete identity and access management solutions for modern businesses.
             </p>
           </div>
@@ -215,7 +215,7 @@ const AccessControlDetail = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -232,10 +232,10 @@ const AccessControlDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-200 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm text-gray-400">
                       {service.description}
                     </p>
                   </div>
@@ -247,10 +247,10 @@ const AccessControlDetail = () => {
       </section>
 
       {/* Implementation Process */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Quick Implementation Process
             </h2>
           </div>
@@ -266,8 +266,8 @@ const AccessControlDetail = () => {
                 <div className="bg-gradient-to-br from-slate-700 to-gray-800 text-white w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl font-bold mx-auto mb-3 sm:mb-4 shadow-lg">
                   {item.step}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-900">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-200">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-400">{item.desc}</p>
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-6 sm:top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-slate-700 to-gray-800"></div>
                 )}

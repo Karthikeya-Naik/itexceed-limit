@@ -49,13 +49,16 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="pb-20 pt-8 bg-background">
+    <section className="pb-20 pt-16 sm:pt-8 md:pt-8 lg:pt-20 bg-gradient-to-b from-gray-900 to-gray-800/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl lg:text-5xl text-foreground mb-4">
+          <p className="text-xs md:text-sm font-semibold text-orange-500 mb-2 tracking-wider uppercase">
+            TRUSTED BY INDUSTRY LEADERS
+          </p>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it - hear from businesses we've helped transform
           </p>
         </div>
@@ -65,46 +68,46 @@ const Testimonials = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Main testimonial card with glassmorphism */}
-          <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-900/60 rounded-3xl border border-white/40 dark:border-slate-700/40 shadow-2xl overflow-hidden">
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
+          {/* Main testimonial card */}
+          <div className="relative bg-gray-800/50 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-gray-700 shadow-xl overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+            {/* Orange gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-orange-600/3 pointer-events-none"></div>
             
-            <div className="relative p-8 md:p-12 lg:p-16">
+            <div className="relative p-6 sm:p-8 md:p-12 lg:p-16">
               {/* Quote icon */}
-              <div className="absolute top-8 right-8 text-primary/10">
-                <Quote className="h-20 w-20 md:h-24 md:w-24" />
+              <div className="absolute top-6 sm:top-8 right-6 sm:right-8 text-orange-500/10">
+                <Quote className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24" />
               </div>
 
               {/* Content container */}
-              <div className="grid md:grid-cols-[1fr,auto] gap-8 items-center">
+              <div className="grid md:grid-cols-[1fr,auto] gap-6 sm:gap-8 items-center">
                 {/* Left side - Testimonial content */}
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {/* Rating stars */}
                   <div className="flex gap-1">
                     {[...Array(currentTestimonial.rating)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className="h-6 w-6 fill-professional-darkBlue text-professional-darkBlue drop-shadow-sm" 
+                        className="h-5 w-5 sm:h-6 sm:w-6 fill-orange-500 text-orange-500" 
                       />
                     ))}
                   </div>
 
                   {/* Testimonial text */}
-                  <p className="text-foreground text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
+                  <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
                     "{currentTestimonial.content}"
                   </p>
 
                   {/* Author info */}
-                  <div className="flex items-center gap-4 pt-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-professional-darkBlue to-secondary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg">
                       {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
-                      <p className="font-bold text-foreground text-lg">
+                      <p className="font-bold text-white text-base sm:text-lg">
                         {currentTestimonial.name}
                       </p>
-                      <p className="text-muted-foreground">
+                      <p className="text-gray-400 text-sm sm:text-base">
                         {currentTestimonial.role} at {currentTestimonial.company}
                       </p>
                     </div>
@@ -112,35 +115,35 @@ const Testimonials = () => {
                 </div>
 
                 {/* Right side - Navigation controls */}
-                <div className="flex md:flex-col gap-4 justify-center items-center">
+                <div className="flex md:flex-col gap-3 sm:gap-4 justify-center items-center">
                   <button
                     onClick={goToPrevious}
-                    className="w-14 h-14 rounded-full backdrop-blur-md bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/30 transition-all duration-300 shadow-lg hover:scale-110"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-orange-400 hover:bg-orange-500/20 hover:border-orange-500 transition-all duration-300 shadow-lg hover:scale-110"
                     aria-label="Previous testimonial"
                   >
-                    <ChevronLeft className="h-6 w-6" />
+                    <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                   </button>
                   
                   <button
                     onClick={goToNext}
-                    className="w-14 h-14 rounded-full backdrop-blur-md bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/30 transition-all duration-300 shadow-lg hover:scale-110"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-orange-400 hover:bg-orange-500/20 hover:border-orange-500 transition-all duration-300 shadow-lg hover:scale-110"
                     aria-label="Next testimonial"
                   >
-                    <ChevronRight className="h-6 w-6" />
+                    <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                   </button>
                 </div>
               </div>
 
               {/* Progress indicators */}
-              <div className="flex gap-2 justify-center mt-8">
+              <div className="flex gap-2 justify-center mt-6 sm:mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       index === currentIndex 
-                        ? 'w-12 bg-professional-darkBlue' 
-                        : 'w-2 bg-professional-darkBlue/40 hover:bg-professional-darkBlue/60'
+                        ? 'w-8 sm:w-12 bg-orange-500' 
+                        : 'w-2 bg-orange-500/40 hover:bg-orange-500/60'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />

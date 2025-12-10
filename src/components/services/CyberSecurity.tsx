@@ -137,9 +137,9 @@ const CybersecurityDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen  bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&h=900&fit=crop" 
@@ -180,7 +180,7 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -188,7 +188,7 @@ const CybersecurityDetail = () => {
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-300 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -196,13 +196,13 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Threat Landscape */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-4">
               Today's Cyber Threat Landscape
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto px-4">
               Cybercriminals are becoming more sophisticated. Is your business prepared?
             </p>
           </div>
@@ -211,8 +211,8 @@ const CybersecurityDetail = () => {
             {threats.map((threat, index) => {
               const IconComponent = threat.icon;
               return (
-                <div key={index} className="group">
-                  <div className="relative h-40 sm:h-48 overflow-hidden rounded-xl mb-3 sm:mb-4">
+                <div key={index} className="group bg-gray-800/50 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-600">
+                  <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-xl mb-3 sm:mb-4">
                     <img 
                       src={threat.image} 
                       alt={threat.title}
@@ -224,10 +224,10 @@ const CybersecurityDetail = () => {
                       <IconComponent className="w-8 h-8 sm:w-10 sm:h-10 text-red-500" />
                     </div>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-1 sm:mb-2 px-2 sm:px-2 lg:px-4">
                     {threat.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-400 px-2 pb-4 sm:px-2 lg:px-4">
                     {threat.description}
                   </p>
                 </div>
@@ -238,7 +238,7 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -255,7 +255,7 @@ const CybersecurityDetail = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0 mt-0.5" />
                     <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -275,13 +275,13 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Comprehensive Security Coverage
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Multi-layered defense strategies that protect every aspect of your business.
             </p>
           </div>
@@ -290,14 +290,14 @@ const CybersecurityDetail = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                <div key={index} className="bg-gray-800/50 p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-600">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-red-600" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-400">
                     {feature.description}
                   </p>
                 </div>
@@ -308,13 +308,13 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Services We Provide */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Our Cybersecurity Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Complete security solutions designed to protect your business from every angle.
             </p>
           </div>
@@ -323,7 +323,7 @@ const CybersecurityDetail = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -340,10 +340,10 @@ const CybersecurityDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-400">
                       {service.description}
                     </p>
                   </div>
@@ -355,29 +355,29 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Compliance & Regulatory Standards
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               We help you meet and maintain compliance with industry regulations and standards.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {compliance.map((item, index) => (
-              <div key={index} className="bg-white p-4 sm:p-6 rounded-xl border-2 border-gray-200 hover:border-red-500 transition-colors">
+              <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl border-2 border-gray-700 hover:border-red-700 transition-colors">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-400">
                   {item.description}
                 </p>
               </div>
@@ -387,7 +387,7 @@ const CybersecurityDetail = () => {
       </section>
 
       {/* Security Process */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">

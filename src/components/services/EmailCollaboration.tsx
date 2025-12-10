@@ -157,9 +157,9 @@ const EmailCollaborationDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1600&h=900&fit=crop" 
@@ -200,7 +200,7 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -208,7 +208,7 @@ const EmailCollaborationDetail = () => {
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-amber-600 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-300 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -216,17 +216,17 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4 sm:mb-6">
                 Empower Your Team With Modern Collaboration
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 In today's remote and hybrid work environment, effective communication and collaboration tools are essential for business success. Our email and collaboration services provide enterprise-grade solutions that enable your team to work together seamlessly, regardless of location.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 From professional email hosting to real-time collaboration platforms, we deploy and manage the tools your organization needs to stay connected, productive, and competitive.
               </p>
               
@@ -234,7 +234,7 @@ const EmailCollaborationDetail = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
+                    <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -260,7 +260,7 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -293,13 +293,13 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Microsoft 365 Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Microsoft 365 Solutions
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive productivity suite for enterprise collaboration.
             </p>
           </div>
@@ -308,21 +308,21 @@ const EmailCollaborationDetail = () => {
             {microsoft365Features.map((item, index) => {
               const IconComponent = item.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border-2 border-gray-200 hover:border-amber-500 transition-all">
+                <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl shadow-lg border-2 border-gray-800 hover:border-amber-800 transition-all">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-100 mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+                  <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">
                     {item.description}
                   </p>
                   <div className="space-y-1">
                     {item.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
-                        <span className="text-xs text-gray-700">{feature}</span>
+                        <span className="text-xs text-gray-400">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -334,26 +334,26 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Collaboration Platforms */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Leading Collaboration Platforms
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               We deploy and support the industry's most trusted collaboration tools.
             </p>
           </div>
 
           <div className="space-y-6 sm:space-y-8">
             {collaborationTools.map((tool, index) => (
-              <div key={index} className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
+              <div key={index} className="bg-gray-800/50 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className={`p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-100 mb-3 sm:mb-4">
                       {tool.name}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+                    <p className="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">
                       {tool.description}
                     </p>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -381,13 +381,13 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Security Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Enterprise Email Security
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Advanced protection keeping your communications safe and compliant.
             </p>
           </div>
@@ -396,14 +396,14 @@ const EmailCollaborationDetail = () => {
             {securityFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+                <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-all">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-400">
                     {feature.description}
                   </p>
                 </div>
@@ -414,13 +414,13 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Services We Provide */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4">
               Our Email & Collaboration Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               End-to-end solutions for modern workplace communication.
             </p>
           </div>
@@ -429,7 +429,7 @@ const EmailCollaborationDetail = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -446,10 +446,10 @@ const EmailCollaborationDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-400">
                       {service.description}
                     </p>
                   </div>
@@ -461,7 +461,7 @@ const EmailCollaborationDetail = () => {
       </section>
 
       {/* Migration Process */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">

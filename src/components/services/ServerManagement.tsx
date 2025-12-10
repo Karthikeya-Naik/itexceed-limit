@@ -133,10 +133,10 @@ const ServerManagementDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden mt-12 sm:mt-16">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-[400px] sm:h-[450px] lg:h-[530px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 to-gray-800/30">
           <img 
             src="https://plus.unsplash.com/premium_photo-1683134018612-560033455e43?q=80&w=1170" 
             alt="Server Management"
@@ -175,15 +175,15 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-700 mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-200 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -191,17 +191,17 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-4 sm:mb-6">
                 Professional Server Management You Can Trust
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              <p className="text-base sm:text-lg text-gray-200 mb-4 sm:mb-6">
                 Your servers are the foundation of your IT infrastructure. Proper server management ensures optimal performance, security, and reliability for all your critical business applications and services.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-200 mb-6 sm:mb-8">
                 Our comprehensive server management services take the complexity out of server administration. From initial setup and configuration to ongoing monitoring and maintenance, we handle all aspects of server management so you can focus on your business goals.
               </p>
               
@@ -209,7 +209,7 @@ const ServerManagementDetail = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
+                    <span className="text-xs sm:text-sm text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -234,7 +234,7 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -267,13 +267,13 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Server Types */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               All Server Types Covered
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               We manage physical, virtual, and cloud servers across all platforms and configurations.
             </p>
           </div>
@@ -282,21 +282,21 @@ const ServerManagementDetail = () => {
             {serverTypes.map((type, index) => {
               const IconComponent = type.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border-2 border-gray-200 hover:border-slate-600 transition-all">
+                <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl shadow-lg border-2 border-gray-800 hover:border-slate-700 transition-all">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-100 mb-2">
                     {type.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+                  <p className="text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4">
                     {type.description}
                   </p>
                   <div className="space-y-1">
                     {type.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-slate-600 rounded-full"></div>
-                        <span className="text-xs text-gray-700">{feature}</span>
+                        <span className="text-xs text-gray-400">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -308,32 +308,32 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Platform Expertise */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Platform Expertise
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
               Deep knowledge of both Windows and Linux server environments.
             </p>
           </div>
 
           <div className="space-y-6 sm:space-y-8">
             {platforms.map((platform, index) => (
-              <div key={index} className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
+              <div key={index} className="bg-gray-800/50 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className={`p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-3 sm:mb-4">
                       {platform.name}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+                    <p className="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">
                       {platform.description}
                     </p>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
                       {platform.versions.map((version, idx) => (
-                        <div key={idx} className="bg-slate-100 px-3 py-1 sm:px-4 sm:py-2 rounded-lg">
-                          <span className="font-semibold text-slate-700 text-sm sm:text-base">{version}</span>
+                        <div key={idx} className="bg-slate-300 px-3 py-1 sm:px-4 sm:py-2 rounded-lg">
+                          <span className="font-semibold text-slate-900 text-sm sm:text-base">{version}</span>
                         </div>
                       ))}
                     </div>
@@ -354,13 +354,13 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Monitoring Metrics */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               What We Monitor
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive monitoring of critical server metrics to ensure optimal performance.
             </p>
           </div>
@@ -369,16 +369,16 @@ const ServerManagementDetail = () => {
             {monitoring.map((item, index) => {
               const IconComponent = item.icon;
               return (
-                <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all">
+                <div key={index} className="bg-gray-800/50 p-4 sm:p-6 rounded-xl shadow-md border border-gray-700 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">
+                      <h3 className="text-base sm:text-lg font-bold text-gray-200 mb-1">
                         {item.metric}
                       </h3>
-                      <p className="text-xs sm:text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-400">
                         Threshold: <span className="font-semibold text-green-600">{item.threshold}</span>
                       </p>
                     </div>
@@ -391,13 +391,13 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Services We Provide */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-3 sm:mb-4">
               Our Server Management Services
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Complete lifecycle management from installation to ongoing optimization.
             </p>
           </div>
@@ -406,7 +406,7 @@ const ServerManagementDetail = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="group bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
+                <div key={index} className="group bg-gray-800/50 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300">
                   <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
                     <img 
                       src={service.image} 
@@ -422,10 +422,10 @@ const ServerManagementDetail = () => {
                   </div>
                   
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-400">
                       {service.description}
                     </p>
                   </div>
@@ -437,7 +437,7 @@ const ServerManagementDetail = () => {
       </section>
 
       {/* Management Process */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
@@ -460,8 +460,8 @@ const ServerManagementDetail = () => {
                 <div className="bg-gradient-to-br from-slate-600 to-gray-700 text-white w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl font-bold mx-auto mb-3 sm:mb-4 shadow-lg">
                   {item.step}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-300">{item.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-200">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-400">{item.desc}</p>
                 {index < 4 && (
                   <div className="hidden lg:block absolute top-6 sm:top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-slate-600 to-gray-700"></div>
                 )}
