@@ -401,6 +401,8 @@ import { Link } from "react-router-dom";
 import { Hotel, ChevronDown, Menu, X, ArrowRight, Server, Cloud, Wifi, Code, Building2, Stethoscope, Factory, Home, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "../../public/logo.png";
+import logo1 from "../../public/logo1.png";
+import logo2 from "../../public/logo2.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -472,7 +474,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors transition-shadow duration-300 will-change-transform ${
         scrolled
           ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800"
           : "bg-gradient-to-b from-gray-900"
@@ -484,6 +486,16 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             {/* <img
               src={logo}
+              alt="ITExceed Logo"
+              className="h-12 w-auto"
+            /> */}
+            <img
+              src={logo1}
+              alt="ITExceed Logo"
+              className="h-12 w-auto"
+            />
+            {/* <img
+              src={logo2}
               alt="ITExceed Logo"
               className="h-12 w-auto"
             /> */}

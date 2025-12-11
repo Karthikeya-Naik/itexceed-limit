@@ -322,7 +322,8 @@ const ScrollableServices = () => {
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
-              WebkitOverflowScrolling: 'touch'
+              WebkitOverflowScrolling: 'touch',
+              paddingTop: '8px',
             }}
           >
             {services.map((service, index) => {
