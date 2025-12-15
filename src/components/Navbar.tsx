@@ -423,7 +423,7 @@ const Navbar = () => {
       name: "IT Services", 
       path: "/services/it-services",
       icon: Server,
-      description: "Comprehensive IT support and management"
+      description: "Comprehensive IT support and manage"
     },
     { 
       name: "Network Infrastructure", 
