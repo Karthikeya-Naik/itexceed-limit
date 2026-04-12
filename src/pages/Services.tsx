@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Code, Cloud, Shield, Server, Database, Network, Headphones, Mail, HardDrive, Wifi, Lock, ArrowRight } from "lucide-react";
+import { Code, Cloud, Shield, Server, Database, Network, Headphones, Mail, HardDrive, Wifi, Lock, ArrowRight, Bot } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -43,6 +43,14 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
       link: "/services/web-development",
       color: "indigo"
+    },
+    {
+      icon: Bot,
+      title: "AI & Automation",
+      description: "Intelligent automation and AI solutions to transform operations and reduce costs",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+      link: "/services/ai-automation",
+      color: "purple"
     },
     {
       icon: Shield,
